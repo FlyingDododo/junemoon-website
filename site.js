@@ -2,7 +2,7 @@
  'use strict';
  const dicts=window.SITE_COPY;
  const locales={'zh-cn':'zh-Hans-CN','zh-hk':'zh-Hant-HK',en:'en'};
- const origin='https://junemoon-studio.carvingai.chatgpt.site/';
+ const origin='https://flyingdododo.github.io/junemoon-website/';
  let lang='zh-cn', stage=0, attachment=false, toastTimer, currentImageCaption='';
  const $=s=>document.querySelector(s);
  const $$=s=>Array.from(document.querySelectorAll(s));
