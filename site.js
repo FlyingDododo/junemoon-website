@@ -17,13 +17,14 @@
    $$('[data-aria]').forEach(e=>e.setAttribute('aria-label',t(e.dataset.aria)));
    $$('[data-lang]').forEach(e=>e.setAttribute('aria-pressed',String(e.dataset.lang===lang)));
    $('#hero-heading').innerHTML=tr('hero.line1')+'<br><span>'+tr('hero.line2')+'</span>';
-   $('.book-title').style.whiteSpace='pre-line';
+   if($('.book-title'))$('.book-title').style.whiteSpace='pre-line';
    const description=t('hero.sub')+' '+t('hero.offer');
    $('meta[name="description"]').content=description;
    $('meta[property="og:title"]').content=t('hero.title');
    $('meta[property="og:description"]').content=description;
    if(currentImageCaption){$('#image-caption').textContent=t(currentImageCaption);$('#full-image').alt=t(currentImageCaption);}
    renderStage();
+   document.dispatchEvent(new CustomEvent("site:language",{detail:{lang}}));
    if(remember){try{localStorage.setItem('jy_lang',lang);const url=new URL(location.href);url.searchParams.set('lang',lang);history.replaceState(null,'',url);}catch{}}
  }
  function notify(s){$('#toast').textContent=s;$('#toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),4000);}
