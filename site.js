@@ -2,7 +2,7 @@
  'use strict';
  const dicts=window.SITE_COPY;
  const locales={'zh-cn':'zh-Hans-CN','zh-hk':'zh-Hant-HK',en:'en'};
- const origin='https://flyingdododo.github.io/junemoon-website/';
+ const origin='https://myjunemoon.com/';
  const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
  let lang='zh-cn',toastTimer,currentImageCaption='';
  const t=k=>dicts[lang][k]??k;
