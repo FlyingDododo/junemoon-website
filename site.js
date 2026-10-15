@@ -17,7 +17,7 @@
     const changed = next !== lang;
     lang = next;
     document.documentElement.lang = locales[lang];
-    document.title = t('meta.title');
+    document.title = t($('title').dataset.title || 'meta.title');
     $$('[data-i18n]').forEach(el => {
       el.textContent = t(el.dataset.i18n);
       if (changed && remember && !calm.matches) { el.classList.remove('swap'); void el.offsetWidth; el.classList.add('swap'); }
@@ -31,6 +31,13 @@
     $('meta[property="og:title"]').content = t('meta.title');
     $('meta[property="og:description"]').content = t('meta.desc');
     if (currentCaption) { $('#image-caption').textContent = t(currentCaption); $('#full-image').alt = t(currentCaption); }
+    // Keep the language when moving between pages.
+    $$('a[href]').forEach(a => {
+      const raw = a.getAttribute('href');
+      if (!/^(\.\/|work\.html|approach\.html)/.test(raw)) return;
+      const [path, hash] = raw.split('#');
+      a.setAttribute('href', path.split('?')[0] + '?lang=' + lang + (hash ? '#' + hash : ''));
+    });
     if (remember) {
       try { localStorage.setItem('jy_lang', lang); } catch {}
       try { const url = new URL(location.href); url.searchParams.set('lang', lang); history.replaceState(null, '', url); } catch {}
@@ -50,14 +57,15 @@
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
   const io = 'IntersectionObserver' in window;
-  if (io) {
-    const links = new Map($$('.nav-links a').map(a => [a.getAttribute('href').slice(1), a]));
+  // Current page in the nav; on the home page, follow the section in view.
+  const page = document.body.className.replace('page-', '');
+  $$('.nav-links a').forEach(a => a.classList.toggle('active', a.dataset.page === page));
+  if (io && page === 'home') {
+    const links = new Map($$('.nav-links a[data-page]').map(a => [a.dataset.page, a]));
     const spy = new IntersectionObserver(entries => {
       entries.forEach(en => { if (en.isIntersecting) links.forEach((a, id) => a.classList.toggle('active', id === en.target.id)); });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    links.forEach((_, id) => { const s = document.getElementById(id); if (s) spy.observe(s); });
-    const top = new IntersectionObserver(([en]) => { if (en.isIntersecting) links.forEach(a => a.classList.remove('active')); }, { rootMargin: '0px 0px -60% 0px' });
-    top.observe($('#top'));
+    ['top', 'about', 'capabilities', 'contact'].forEach(id => { const el = document.getElementById(id); if (el) spy.observe(el); });
   }
 
   /* Reveal on first view — elements are visible unless JS marks them pending. */
@@ -75,7 +83,7 @@
     onFirstView(annotated, el => el.classList.remove('pending'), { rootMargin: '0px 0px -25% 0px' });
     const geo = $$('.geo-chart'); geo.forEach(el => el.classList.add('pending'));
     onFirstView(geo, el => el.classList.remove('pending'), { rootMargin: '0px 0px -20% 0px' });
-    onFirstView([$('#fig-gateway')], fig => {
+    if ($('#fig-gateway')) onFirstView([$('#fig-gateway')], fig => {
       $$('.gw-node', fig).forEach((n, i) => { setTimeout(() => n.classList.add('lit'), 160 * i); setTimeout(() => n.classList.remove('lit'), 160 * i + 900); });
     }, { rootMargin: '0px 0px -30% 0px' });
   }
@@ -116,7 +124,7 @@
     catch { $('#copy-text').value = s; $('#copy-dialog').showModal(); $('#copy-text').focus(); $('#copy-text').select(); }
   }
   $('#copy-contact').addEventListener('click', () => copy(t('brand') + ' · Junemoon\nriversense11@gmail.com\n+86 187 2153 2448\n' + origin));
-  $$('.share').forEach(b => b.addEventListener('click', () => { const u = new URL(origin); u.searchParams.set('lang', lang); u.hash = b.dataset.share; copy(u.href); }));
+  $$('.share').forEach(b => b.addEventListener('click', () => { const u = new URL(page === 'work' ? 'work' : '', origin); u.searchParams.set('lang', lang); u.hash = b.dataset.share; copy(u.href); }));
   $('#close-copy').addEventListener('click', () => $('#copy-dialog').close());
   $$('[data-image]').forEach(b => b.addEventListener('click', () => {
     currentCaption = b.dataset.caption;
