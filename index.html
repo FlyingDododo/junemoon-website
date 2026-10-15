@@ -3,79 +3,395 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f8fa">
-  <title>佳裕云智 · 你的 AI 增长伙伴</title>
-  <meta name="description" content="企业 AI 咨询、业务系统与持续交付。从办公与财务流转、教育平台，到医疗 GEO，把一段真实工作做完整。">
+  <meta name="theme-color" content="#f3f5f8">
+  <meta name="color-scheme" content="light">
+  <title>佳裕云智 Junemoon · 业务咨询与 AI 落地</title>
+  <meta name="description" content="找出一直值得做、却因为太费人或太花钱而搁置的事，用 AI 把它做成每天能用的系统，量清楚效果，持续改进。">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="佳裕云智 · 你的 AI 增长伙伴">
-  <meta property="og:description" content="诊断、落地、陪跑，同一批人。看具体项目、交付样例与验证方法。">
-  <meta property="og:image" content="https://myjunemoon.com/assets/blue-folds.png">
+  <meta property="og:title" content="佳裕云智 Junemoon · 业务咨询与 AI 落地">
+  <meta property="og:description" content="找出一直值得做、却因为太费人或太花钱而搁置的事，用 AI 把它做成每天能用的系统，量清楚效果，持续改进。">
+  <meta property="og:image" content="https://myjunemoon.com/assets/og.png">
   <meta property="og:url" content="https://myjunemoon.com/">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://myjunemoon.com/">
   <link rel="icon" type="image/png" href="assets/logo.png">
-  <link rel="stylesheet" href="site.css">
-  <link rel="stylesheet" href="evidence.css?v=20261001">
-  <script src="content.js" defer></script>
-  <script src="evidence-copy.js?v=20261001" defer></script>
-  <script src="site.js?v=20261005" defer></script>
+  <link rel="stylesheet" href="site.css?v=20261015">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="copy.js?v=20261015" defer></script>
+  <script src="site.js?v=20261015" defer></script>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="skip">跳到正文</a>
-<header class="nav">
-  <a class="brand" href="#top" aria-label="佳裕云智 Junemoon"><img src="assets/logo.png" width="33" height="37" alt=""><span data-i18n="brand">佳裕云智</span></a>
-  <nav class="desktop-nav" aria-label="主导航">
-    <a href="#increment" data-i18n="nav.idea">我们怎么想</a><a href="#services" data-i18n="nav.services">服务</a><a href="#work" data-i18n="nav.work">成果</a><a href="#contact" data-i18n="nav.contact">联系</a>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="佳裕云智 Junemoon"><img src="assets/logo.png" width="22" height="25" alt=""><span class="brand-zh" data-i18n="brand">佳裕云智</span><span class="brand-en" aria-hidden="true">Junemoon</span></a>
+  <nav class="nav-links" aria-label="主导航">
+    <a href="#increment" data-i18n="nav.idea">思路</a>
+    <a href="#approach" data-i18n="nav.approach">怎么合作</a>
+    <a href="#work" data-i18n="nav.work">案例</a>
+    <a href="#services" data-i18n="nav.services">服务</a>
+    <a href="#boundaries" data-i18n="nav.bd">边界</a>
+    <a href="#contact" data-i18n="nav.contact">联系</a>
   </nav>
-  <div class="nav-tools"><div class="languages" role="group" aria-label="Language"><button data-lang="zh-cn" aria-pressed="true">简</button><button data-lang="zh-hk" aria-pressed="false">繁</button><button data-lang="en" aria-pressed="false">EN</button></div><a class="nav-contact" href="#contact" data-i18n="nav.cta">联系我们</a><button class="menu-button" aria-expanded="false" aria-controls="mobile-nav" data-i18n="menu">菜单</button></div>
+  <div class="nav-tools">
+    <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="zh-cn" aria-pressed="true" lang="zh-Hans">简</button><button type="button" data-lang="zh-hk" aria-pressed="false" lang="zh-Hant">繁</button><button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button></div>
+    <a class="nav-cta" href="#contact" data-i18n="nav.cta">聊一件事</a>
+    <button type="button" class="menu-button" aria-expanded="false" aria-controls="mobile-nav"><span data-i18n="menu">菜单</span><i aria-hidden="true"></i></button>
+  </div>
 </header>
-<nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" hidden><a href="#increment" data-i18n="nav.idea">我们怎么想</a><a href="#services" data-i18n="nav.services">服务</a><a href="#work" data-i18n="nav.work">成果</a><a href="#contact" data-i18n="nav.contact">联系</a></nav>
+<nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" hidden>
+  <a href="#increment"><span class="mono">01</span><span data-i18n="nav.idea">思路</span></a>
+  <a href="#approach"><span class="mono">02</span><span data-i18n="nav.approach">怎么合作</span></a>
+  <a href="#work"><span class="mono">03</span><span data-i18n="nav.work">案例</span></a>
+  <a href="#services"><span class="mono">04</span><span data-i18n="nav.services">服务</span></a>
+  <a href="#boundaries"><span class="mono">05</span><span data-i18n="nav.bd">边界</span></a>
+  <a href="#contact"><span class="mono">06</span><span data-i18n="nav.contact">联系</span></a>
+</nav>
+
 <main id="main">
-  <section class="hero wrap" id="top">
-    <div class="hero-copy"><p class="hero-name">Junemoon</p><h1 id="hero-heading">你的 AI<br><span>增长伙伴</span></h1><p class="hero-sub" data-i18n="hero.sub">帮助企业把 AI 贯穿在业务里。</p><div class="hero-actions"><a class="button primary" href="#work"><span data-i18n="e.hero.cta">看我们做过的</span><span aria-hidden="true">↗</span></a><a class="text-link" href="#contact" data-i18n="hero.cta1">联系我们</a></div></div>
-    <figure class="hero-art"><picture><source srcset="assets/blue-folds.webp" type="image/webp"><img src="assets/blue-folds.png" width="1536" height="1024" fetchpriority="high" alt="蓝色纸带折成相连的门，连接一叠文件与下一段工作" data-alt="hero.art"></picture></figure>
-    <div class="hero-bottom"><span data-i18n="hero.offer">企业 AI 咨询 · 系统落地 · 长期陪跑</span><span data-i18n="ap.title">诊断、落地、陪跑，同一批人。</span></div>
+  <!-- Hero: the thesis, stated and drawn -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="kicker mono" data-i18n="hero.kicker">业务咨询 × AI 落地</p>
+        <h1 data-i18n-html="hero.title">以前做不起的事，<br><em>现在值得做了。</em></h1>
+        <p class="hero-lead" data-i18n="hero.lead">佳裕云智做业务咨询，也亲手做 AI 落地。我们先进到你的业务里，找出那些一直值得做、却因为太费人或太花钱而搁置的事，再和你的团队一起把它做成每天能用的系统，量清楚效果，持续改进。</p>
+        <div class="actions">
+          <a class="button primary" href="#work"><span data-i18n="hero.cta">看我们做过的</span><span class="arrow" aria-hidden="true">→</span></a>
+          <a class="button ghost" href="#contact" data-i18n="hero.cta2">聊一件具体的事</a>
+        </div>
+      </div>
+
+      <figure class="fig threshold" id="fig-threshold" aria-labelledby="fig1-title">
+        <div class="fig-head">
+          <span class="mono fig-label" data-i18n="fig1.label">图 01 · 示意，不是数据</span>
+          <div class="toggle" role="group" aria-label="Before / after">
+            <button type="button" data-th="before" aria-pressed="false" data-i18n="fig1.before">以前的执行成本</button><button type="button" data-th="after" aria-pressed="true" data-i18n="fig1.after">有 AI 之后</button>
+          </div>
+        </div>
+        <p class="fig-title" id="fig1-title" data-i18n="fig1.title">值得投入的门槛，下移了</p>
+        <ol class="th-rows">
+          <li style="--v:.62"><span class="th-name" data-i18n="fig1.item.1">每周更新的门店活动方案</span><span class="th-track"><span class="th-bar"></span></span></li>
+          <li style="--v:.74"><span class="th-name" data-i18n="fig1.item.2">AI 搜索里的患者问答</span><span class="th-track"><span class="th-bar"></span></span></li>
+          <li style="--v:.56"><span class="th-name" data-i18n="fig1.item.3">每一条线索都有人回访</span><span class="th-track"><span class="th-bar"></span></span></li>
+          <li style="--v:.48"><span class="th-name" data-i18n="fig1.item.4">扫描件归档与期限清单</span><span class="th-track"><span class="th-bar"></span></span></li>
+          <li style="--v:.66"><span class="th-name" data-i18n="fig1.item.5">试卷转成可编辑题库</span><span class="th-track"><span class="th-bar"></span></span></li>
+        </ol>
+        <div class="th-axis" aria-hidden="true"><span class="th-old mono" data-i18n="fig1.before">以前的执行成本</span><span class="th-new mono" data-i18n="fig1.after">有 AI 之后</span></div>
+        <figcaption data-i18n="fig1.caption">每一行是一类工作，长度代表它的价值。竖线是完成它所需的成本：AI 把成本拉低后，原本在线左侧、“不划算”的工作越过了门槛。</figcaption>
+      </figure>
+    </div>
   </section>
 
-  <section class="manifesto wrap" id="increment"><p class="section-label" data-i18n="inc.kicker">我们怎么想</p><h2 data-i18n="inc.title">把 AI 装进业务，长出新的增长。</h2><p class="manifesto-lead" data-i18n="inc.lead">以前太贵、太慢、腾不出人做不了的事，现在第一次做得起。</p><div class="opportunity"><span class="plus" aria-hidden="true">＋</span><p data-i18n="inc.new">新的服务入口，更完整的客户跟进，有依据的专业协作。先从一件值得做的事开始。</p></div></section>
+  <!-- 01 Thinking -->
+  <section class="section" id="increment"><span id="lab" class="anchor-alias"></span>
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker mono" data-i18n="idea.kicker">01 · 思路</p>
+        <div>
+          <h2 data-i18n="idea.title">增效，不靠裁员。</h2>
+          <p class="lead" data-i18n="idea.lead">很多 AI 项目从“能少用几个人”算起，结果卡在组织摩擦里。我们从另一头开始：哪些事一直应该做，但以前请不起人、排不出时间、算不过账？AI 让这些事第一次变得可行。它们带来的是新渠道、新服务和更好的跟进，而不是一份裁员名单。</p>
+        </div>
+      </header>
+      <ol class="ideas reveal-group">
+        <li class="reveal"><span class="mono idx">+1</span><h3 data-i18n="idea.1.t">新的渠道</h3><p data-i18n="idea.1.d">客户开始直接问 AI。品牌有没有出现在答案里、说得对不对，是一个以前不存在的获客入口。</p><a class="mono see" href="#case-geo">→ 03.C</a></li>
+        <li class="reveal"><span class="mono idx">+2</span><h3 data-i18n="idea.2.t">接住以前漏掉的</h3><p data-i18n="idea.2.d">线索太多跟不过来，扫描件堆着没归档，期限靠人记。让系统先整理、标出缺口，人把精力放在判断和跟进上。</p><a class="mono see" href="#case-scan">→ 03.A</a></li>
+        <li class="reveal"><span class="mono idx">+3</span><h3 data-i18n="idea.3.t">以前做不起的频率</h3><p data-i18n="idea.3.d">一家商场以前一个季度策划一次活动。方案和物料的制作成本降下来后，可以按周、按客群去试，再看哪种有效。</p><span class="tag-concept mono" data-i18n="idea.3.tag">举例说明，不是已交付案例</span></li>
+      </ol>
+    </div>
+  </section>
 
-  <section class="work-section" id="work"><div class="wrap">
-    <div class="section-intro"><p class="section-label" data-i18n="work.kicker">我们在做的</p><h2 data-i18n="work.title">目前在做的几个项目。</h2><p data-i18n="e.work.lead">从已有项目里，看具体做法和交付。</p></div>
-    <nav class="work-index" aria-label="Projects"><a href="#case-platform">01 <span data-i18n="e.work.jump.edu">教育平台与 AI 录入</span> <span aria-hidden="true">↘</span></a><a href="#case-scan">02 <span data-i18n="e.work.jump.scan">扫描归档与期限跟进</span> <span aria-hidden="true">↘</span></a><a href="#case-geo">03 <span data-i18n="e.work.jump.geo">医疗 AI 搜索监测</span> <span aria-hidden="true">↘</span></a></nav>
-    <article class="evidence-case education-case" id="case-platform">
-      <div class="case-overview"><div class="case-eyebrow"><span class="case-number">01</span><span class="case-category" data-i18n="platform.category">教育出版平台</span></div><h3 data-i18n="platform.title">接住正在运行的系统，持续把它做好。</h3><p class="case-description" data-i18n="e.edu.desc">在教育出版平台的持续开发中，把 PDF 和图片试卷转成可编辑的题目草稿，再由编辑核对、查重、确认入库。</p><p class="evidence-status" data-i18n="e.edu.status">2026 年 7 月 · 功能上线及真实试卷验收记录</p><button class="text-link share-case" data-share="case-platform" data-i18n="share">复制本案例链接</button></div>
-      <div class="case-evidence"><ol class="process-line"><li><span aria-hidden="true">01</span><strong data-i18n="e.edu.flow.1">上传材料</strong></li><li><span aria-hidden="true">02</span><strong data-i18n="e.edu.flow.2">识别草稿</strong></li><li><span aria-hidden="true">03</span><strong data-i18n="e.edu.flow.3">人工核对</strong></li><li><span aria-hidden="true">04</span><strong data-i18n="e.edu.flow.4">确认入库</strong></li></ol><div class="evidence-rows"><div><h4 data-i18n="e.edu.row.1.t">交付的功能</h4><p data-i18n="e.edu.row.1.d">材料上传、题目预览与修改、重复题提示、分类检索；已记录支持 6 类题型。</p></div><div><h4 data-i18n="e.edu.row.2.t">用真实材料复验</h4><p data-i18n="e.edu.row.2.d">验收发现阅读原文遗漏后，修复题组结构；同一份材料复测，原文与 5 道关联小题完整保留。</p></div><div><h4 data-i18n="e.edu.row.3.t">系统能持续迭代</h4><p data-i18n="e.edu.row.3.d">同一平台的接管工作包含资产盘点、独立发布链、版本对应与回退资料，支持后续维护和开发。</p></div></div><p class="scope-note" data-i18n="e.edu.scope">以上为我方参与的工作与历史验收范围；新增题型、扩大使用范围另行验证。</p></div>
-    </article>
-    <article class="evidence-case scan-case" id="case-scan"><span id="professional" class="anchor-alias"></span>
-      <div class="case-overview"><div class="case-eyebrow"><span class="case-number">02</span><span class="case-category" data-i18n="e.scan.category">文档处理 · 专业服务场景</span></div><h3 data-i18n="e.scan.title">从扫描原件，到能跟进的清单。</h3><p class="case-description" data-i18n="e.scan.desc">识别公司、文件类别和明示日期。经办人对照原件确认后，建立归档副本，另存期限清单；保留原期限、延期历史和人工备注。</p><p class="evidence-status" data-i18n="e.scan.status">2026 年 9 月 · Windows 本地试用版，使用自制文件验证</p><button class="text-link share-case" data-share="case-scan" data-i18n="share">复制本案例链接</button></div>
-      <div class="case-evidence scan-evidence">
-        <div class="artifact-pair"><figure class="source-artifact"><figcaption><span data-i18n="e.scan.input">输入样例：扫描通知</span></figcaption><button class="artifact-image" data-image="assets/document-sample.png" data-caption="e.scan.caption" aria-label="输入样例：扫描通知" data-aria="e.scan.input"><img src="assets/document-sample.png" width="1275" height="1650" loading="lazy" alt="输入样例：扫描通知" data-alt="e.scan.input"><span class="artifact-zoom" data-i18n="e.scan.zoom">放大查看</span></button></figure><figure class="export-artifact"><figcaption><span data-i18n="e.scan.output">输出样例：实际导出的 Excel 清单</span></figcaption><button class="artifact-image" data-image="assets/deadline-export.png" data-caption="e.scan.caption" aria-label="输出样例：实际导出的 Excel 清单" data-aria="e.scan.output"><img src="assets/deadline-export.png" width="2170" height="354" loading="lazy" alt="输出样例：实际导出的 Excel 清单" data-alt="e.scan.output"><span class="artifact-zoom" data-i18n="e.scan.zoom">放大查看</span></button><div class="artifact-notes"><div><h4 data-i18n="e.scan.point.1.t">原件留底</h4><p data-i18n="e.scan.point.1.d">先预览目录与文件名，确认后另建归档副本。</p></div><div><h4 data-i18n="e.scan.point.2.t">不确定就待核</h4><p data-i18n="e.scan.point.2.d">有歧义的公司或日期保留原文，不直接写进正式清单。</p></div><div><h4 data-i18n="e.scan.point.3.t">交付能继续使用</h4><p data-i18n="e.scan.point.3.d">输出文件与八栏 Excel，保留负责人、状态、备注和来源文件名。</p></div></div></figure></div>
-        <p class="artifact-caption" data-i18n="e.scan.caption">项目中的自制测试资料及实际导出结果，均为虚构公司与事项；图片为繁体中文。不是客户真实档案，也不代表客户文件识别率。</p><p class="scope-note" data-i18n="e.scan.scope">试用包已验证；真实客户文件的准确率、处理用时和现有清单对接，留到试点中确认。</p>
+  <!-- 02 How we work -->
+  <section class="section approach" id="approach"><span id="deliverables" class="anchor-alias"></span>
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker mono" data-i18n="ap.kicker">02 · 怎么合作</p>
+        <div>
+          <h2 data-i18n="ap.title">诊断、落地、陪跑，同一批人。</h2>
+          <p class="lead" data-i18n="ap.lead">我们的做法接近“前线部署工程师”（FDE）：顾问和工程师是同一批人。坐到业务旁边，先理解，再动手，上线后继续负责。</p>
+        </div>
+      </header>
+      <ol class="loop reveal-group">
+        <li class="reveal">
+          <div class="loop-top"><span class="mono loop-n">01</span><span class="loop-line" aria-hidden="true"></span></div>
+          <h3 data-i18n="ap.1.t">看清楚</h3>
+          <p data-i18n="ap.1.d">走一遍流程，盘一盘资料，按“值不值得做、风险多大、资料够不够”给候选场景排序。</p>
+          <dl><dt class="mono" data-i18n="ap.get">你拿到</dt><dd data-i18n="ap.1.g">场景清单与优先级、资料和权限边界、分期路线图。</dd><dt class="mono" data-i18n="ap.measure">怎么算成功</dt><dd data-i18n="ap.1.m">你能决定先做哪一件，也说得出为什么。</dd></dl>
+        </li>
+        <li class="reveal">
+          <div class="loop-top"><span class="mono loop-n">02</span><span class="loop-line" aria-hidden="true"></span></div>
+          <h3 data-i18n="ap.2.t">做出来</h3>
+          <p data-i18n="ap.2.d">选一件事，用真实样本做出能用的版本。先在影子模式里跑，和人工结果对照，靠谱了再放开。</p>
+          <dl><dt class="mono" data-i18n="ap.get">你拿到</dt><dd data-i18n="ap.2.g">可用的系统功能或工具、使用说明、样本对照结果。</dd><dt class="mono" data-i18n="ap.measure">怎么算成功</dt><dd data-i18n="ap.2.m">在约定样本上，达到双方事先定好的标准。</dd></dl>
+        </li>
+        <li class="reveal">
+          <div class="loop-top"><span class="mono loop-n">03</span><span class="loop-line" aria-hidden="true"></span></div>
+          <h3 data-i18n="ap.3.t">量清楚</h3>
+          <p data-i18n="ap.3.d">用同一批问题、同一口径做前后比较；记录质量、修改量和完整处理用时，也记下已知限制。</p>
+          <dl><dt class="mono" data-i18n="ap.get">你拿到</dt><dd data-i18n="ap.3.g">验收记录、已知限制；涉及开发时，附约定源码与部署、恢复资料。</dd><dt class="mono" data-i18n="ap.measure">怎么算成功</dt><dd data-i18n="ap.3.m">结果可以复查，不靠印象。</dd></dl>
+        </li>
+        <li class="reveal">
+          <div class="loop-top"><span class="mono loop-n">04</span><span class="loop-line" aria-hidden="true"></span><span class="loop-back mono" aria-hidden="true">↺ 01</span></div>
+          <h3 data-i18n="ap.4.t">持续改</h3>
+          <p data-i18n="ap.4.d">上线不是终点。日常运维、按月复盘，需要时再做下一步开发。一项一报价，见效了再往下做。</p>
+          <dl><dt class="mono" data-i18n="ap.get">你拿到</dt><dd data-i18n="ap.4.g">问题清单、负责人、复盘记录、下一阶段范围。</dd><dt class="mono" data-i18n="ap.measure">怎么算成功</dt><dd data-i18n="ap.4.m">系统一直有人管，改进有节奏。</dd></dl>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 03 Work -->
+  <section class="section work" id="work">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker mono" data-i18n="work.kicker">03 · 案例</p>
+        <div>
+          <h2 data-i18n="work.title">做过的事，和它现在的状态。</h2>
+          <p class="lead" data-i18n="work.lead">每个案例写明我们做了什么、怎么验证，以及还没验证的部分。客户名称按约定匿名。</p>
+        </div>
+      </header>
+      <nav class="case-index mono" aria-label="Cases">
+        <a href="#case-scan"><b>A</b><span data-i18n="scan.category">专业服务 · 文件处理</span></a>
+        <a href="#case-platform"><b>B</b><span data-i18n="edu.category">教育出版平台 · 接管与持续开发</span></a>
+        <a href="#case-geo"><b>C</b><span data-i18n="geo.category">医疗 · AI 搜索可见度（GEO）</span></a>
+        <a href="#case-gate"><b>D</b><span data-i18n="gate.category">医疗运营 · 可控 AI 接入</span></a>
+        <a href="#case-office"><b>E</b><span data-i18n="office.category">办公与财务流转</span></a>
+      </nav>
+
+      <!-- A: accounting document workbench -->
+      <article class="case" id="case-scan"><span id="professional" class="anchor-alias"></span>
+        <header class="case-head">
+          <span class="case-id mono">03.A</span>
+          <span class="case-cat mono" data-i18n="scan.category">专业服务 · 文件处理</span>
+          <span class="status" data-phase="full" data-i18n="scan.status">试用版已交付 · 2026 年 10 月</span>
+          <button type="button" class="share mono" data-share="case-scan" data-i18n="share">复制案例链接</button>
+        </header>
+        <h3 class="case-title" data-i18n="scan.title">从一叠扫描件，到一份能跟进的期限清单。</h3>
+        <div class="case-body">
+          <dl class="case-text">
+            <dt class="mono" data-i18n="work.situation">场景</dt><dd data-i18n="scan.situation">会计事务所每天收到各类通知和来函：属于哪家公司、是什么文件、哪天截止，过去要靠人逐份看、逐份记。</dd>
+            <dt class="mono" data-i18n="work.did">我们做了什么</dt><dd data-i18n="scan.did">我们做了一个在 Windows 本机运行的档案工作台。模型读取扫描件，提出公司、文件类别和日期；经办人对照原文核准后，系统才建立归档副本、更新期限清单。原件不改名，延期保留原期限和人工备注。</dd>
+            <dt class="mono ok" data-i18n="work.verified">已验证</dt><dd data-i18n="scan.verified">用真实模型处理模拟打印回扫的虚构文书；人工核准后生成归档副本和八栏 Excel，延期更新保留原期限，含糊日期留待人工核对。</dd>
+            <dt class="mono todo" data-i18n="work.open">还待验证</dt><dd data-i18n="scan.open">客户真实文件的识别准确率、处理用时，以及与事务所现有表格的对接，在试用中确认。</dd>
+          </dl>
+          <div class="case-media">
+            <figure class="shot annotated">
+              <button type="button" class="zoom" data-image="assets/acct-review.webp" data-caption="scan.fig">
+                <img src="assets/acct-review.webp" width="1250" height="678" loading="lazy" alt="档案工作台核验界面：左侧为扫描原文，右侧为模型提出的公司、文件类别与日期" data-alt="scan.fig">
+                <span class="pin" style="--x:30%;--y:30%" aria-hidden="true">1</span>
+                <span class="pin pin-ai" style="--x:84%;--y:58%" aria-hidden="true">2</span>
+                <span class="pin pin-human" style="--x:84%;--y:27%" aria-hidden="true">3</span>
+              </button>
+              <ol class="pins-legend">
+                <li><span class="pin-dot">1</span><span data-i18n="scan.note.1">原文逐页可查</span></li>
+                <li><span class="pin-dot pin-ai">2</span><span data-i18n="scan.note.2">模型提出的候选</span></li>
+                <li><span class="pin-dot pin-human">3</span><span data-i18n="scan.note.3">人核对后才归档</span></li>
+              </ol>
+              <figcaption class="mono" data-i18n="scan.fig">真实界面截图 · 虚构公司与文书 · 繁体中文界面</figcaption>
+            </figure>
+            <div class="shot-pair">
+              <figure class="shot detail"><button type="button" class="zoom" data-image="assets/acct-ambiguous.webp" data-caption="scan.detail.1"><img src="assets/acct-ambiguous.webp" width="355" height="415" loading="lazy" alt="日期写法有歧义时，截止日字段留空并显示提示" data-alt="scan.detail.1"></button><figcaption data-i18n="scan.detail.1">日期写成 05/06/2027，日月次序无法确定：系统留空，不写进正式清单。</figcaption></figure>
+              <figure class="shot detail"><button type="button" class="zoom" data-image="assets/acct-approve.webp" data-caption="scan.detail.2"><img src="assets/acct-approve.webp" width="355" height="385" loading="lazy" alt="核验人填写备注并勾选确认后，才可产生交付预览" data-alt="scan.detail.2"></button><figcaption data-i18n="scan.detail.2">核验人勾选确认后，才产生交付预览。</figcaption></figure>
+            </div>
+            <figure class="shot strip"><button type="button" class="zoom" data-image="assets/deadline-export.png" data-caption="scan.export"><img src="assets/deadline-export.png" width="2170" height="354" loading="lazy" alt="实际导出的期限清单（八栏 Excel）" data-alt="scan.export"></button><figcaption data-i18n="scan.export">实际导出的期限清单（八栏 Excel）</figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- B: education platform -->
+      <article class="case" id="case-platform">
+        <header class="case-head">
+          <span class="case-id mono">03.B</span>
+          <span class="case-cat mono" data-i18n="edu.category">教育出版平台 · 接管与持续开发</span>
+          <span class="status" data-phase="full" data-i18n="edu.status">运行中 · 正式技术服务</span>
+          <button type="button" class="share mono" data-share="case-platform" data-i18n="share">复制案例链接</button>
+        </header>
+        <h3 class="case-title" data-i18n="edu.title">接住一个正在运行的平台，再让已有内容进入新流程。</h3>
+        <div class="case-body">
+          <dl class="case-text">
+            <dt class="mono" data-i18n="work.situation">场景</dt><dd data-i18n="edu.situation">一家出版机构的在线教学平台需要有人接手维护，同时继续开发新功能。大量试卷以 PDF 和图片形式存在，转成题库要逐题录入。</dd>
+            <dt class="mono" data-i18n="work.did">我们做了什么</dt><dd data-i18n="edu.did">先做非破坏性评估，盘点前台、后台、App、账号、云资源和接口；两周试运维后转为正式技术服务，日常运维与二次开发分两条线管理。在此基础上开发 AI 试卷录入：上传 PDF 或图片，生成可编辑的题目草稿，编辑核对、查重后确认入库。</dd>
+            <dt class="mono ok" data-i18n="work.verified">已验证</dt><dd data-i18n="edu.verified">2026 年 7 月上线，记录覆盖 6 类题型。验收中发现阅读原文遗漏，修复题组结构后用同一份试卷复测，原文与 5 道关联小题完整保留。</dd>
+            <dt class="mono todo" data-i18n="work.open">还待验证</dt><dd data-i18n="edu.open">更多题型和更大范围使用，另行验证。这里只写我们参与的技术工作，不把平台全部功能或用户规模算作我们的成果。</dd>
+          </dl>
+          <div class="case-media">
+            <figure class="diagram flow">
+              <ol class="flow-steps">
+                <li><span class="mono">PDF / IMG</span><strong data-i18n="edu.flow.1">上传试卷</strong></li>
+                <li class="is-ai"><span class="mono">MODEL</span><strong data-i18n="edu.flow.2">生成题目草稿</strong></li>
+                <li class="is-human"><span class="mono">EDITOR</span><strong data-i18n="edu.flow.3">编辑核对、查重</strong><em data-i18n="edu.flow.note">人在这里决定</em></li>
+                <li><span class="mono">DB</span><strong data-i18n="edu.flow.4">确认入库</strong></li>
+              </ol>
+              <div class="flow-track" aria-hidden="true">
+                <span class="mono">assess</span><span class="mono">inventory</span><span class="mono">trial ops ×2w</span><span class="mono">service: ops ∥ dev</span>
+              </div>
+              <figcaption class="mono" data-i18n="edu.fig">流程示意，依据功能上线与验收记录绘制</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- C: healthcare GEO -->
+      <article class="case" id="case-geo">
+        <header class="case-head">
+          <span class="case-id mono">03.C</span>
+          <span class="case-cat mono" data-i18n="geo.category">医疗 · AI 搜索可见度（GEO）</span>
+          <span class="status" data-phase="full" data-i18n="geo.status">检测报告已交付 · 2026 年 5 月</span>
+          <button type="button" class="share mono" data-share="case-geo" data-i18n="share">复制案例链接</button>
+        </header>
+        <h3 class="case-title" data-i18n="geo.title">患者开始问 AI 了。医院在答案里吗？</h3>
+        <div class="case-body">
+          <dl class="case-text">
+            <dt class="mono" data-i18n="work.situation">场景</dt><dd data-i18n="geo.situation">越来越多人先问 DeepSeek、豆包、Kimi 或通义千问，再决定去哪家医院。这是一个以前不存在的渠道，多数医院并不知道自己在里面是什么样子。</dd>
+            <dt class="mono" data-i18n="work.did">我们做了什么</dt><dd data-i18n="geo.did">我们为一家专科医院做了四引擎检测：按品牌、症状、费用、术后、到院等 13 类问题提问，记录原始回答、是否提及、同屏竞品和事实错误；按可见性、推荐强度、事实准确性、证据质量和专科匹配度评分，再整理成内容纠错与复测清单。</dd>
+            <dt class="mono ok" data-i18n="work.verified">已验证</dt><dd data-i18n="geo.verified">已交付检测报告与逐条明细（问题分类、引擎与模型、原始回答、是否提及、竞品、扣分原因）。</dd>
+            <dt class="mono todo" data-i18n="work.open">还待验证</dt><dd data-i18n="geo.open">检测不保证排名或引用。提升幅度要用同一组问题、同一批引擎做前后对比；在取得这样的记录之前，我们不公布提升数字。</dd>
+          </dl>
+          <div class="case-media">
+            <figure class="diagram geo-chart">
+              <p class="mono fig-label" data-i18n="geo.fig.title">2026-05-21 基线检测 · 211 条回答 · 4 个引擎</p>
+              <div class="geo-row" style="--p:1">
+                <p class="geo-q" data-i18n="geo.bar.1">直接问医院名：品牌、预约、口碑、到院</p>
+                <div class="geo-bar"><span></span></div>
+                <p class="geo-n"><b class="mono">48 / 48</b> <span data-i18n="geo.bar.unit">条回答提到这家医院</span></p>
+              </div>
+              <div class="geo-row is-gap" style="--p:.104">
+                <p class="geo-q" data-i18n="geo.bar.2">按需求提问：症状、费用、方案、术后等</p>
+                <div class="geo-bar"><span></span></div>
+                <p class="geo-n"><b class="mono">17 / 163</b> <span data-i18n="geo.bar.unit">条回答提到这家医院</span></p>
+              </div>
+              <p class="geo-takeaway" data-i18n="geo.takeaway">按名字问，AI 都认识这家医院；按需求问，大约十次里才提到一次。后一类提问者，正是还没被接住的潜在患者。</p>
+              <figcaption class="mono" data-i18n="geo.fig">真实检测数据的汇总，客户匿名。这是一次基线，不是优化后的效果。</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- D: controlled AI in healthcare operations -->
+      <article class="case" id="case-gate">
+        <header class="case-head">
+          <span class="case-id mono">03.D</span>
+          <span class="case-cat mono" data-i18n="gate.category">医疗运营 · 可控 AI 接入</span>
+          <span class="status" data-phase="half" data-i18n="gate.status">演示与小组验证</span>
+          <button type="button" class="share mono" data-share="case-gate" data-i18n="share">复制案例链接</button>
+        </header>
+        <h3 class="case-title" data-i18n="gate.title">AI 先只看不发，涉及费用就转人工。</h3>
+        <div class="case-body">
+          <dl class="case-text">
+            <dt class="mono" data-i18n="work.situation">场景</dt><dd data-i18n="gate.situation">医院原有的 CRM、客服和渠道系统各自运作。线索要整理，咨询要及时回复，但费用和诊疗承诺这类话，不能让 AI 随口说。</dd>
+            <dt class="mono" data-i18n="work.did">我们做了什么</dt><dd data-i18n="gate.did">在原系统之上补一层工作台和任务层：线索按规则分池，规则先空跑出报告、确认无误再执行，对生产 CRM 只读。AI 坐席在影子模式下给出带来源的建议回复，由客服采用、修改或转人工；触发护栏规则的问题强制转人工。</dd>
+            <dt class="mono todo" data-i18n="work.open">还待验证</dt><dd data-i18n="gate.open">目前处于演示与小组验证阶段，没有全面上线；写入生产系统尚未启用。</dd>
+          </dl>
+          <div class="case-media">
+            <figure class="shot phone">
+              <button type="button" class="zoom" data-image="assets/agent-guardrail.webp" data-caption="gate.fig"><img src="assets/agent-guardrail.webp" width="453" height="836" loading="lazy" alt="AI 坐席示意界面：建议回复附来源，涉及费用的问题按护栏规则强制转人工" data-alt="gate.fig"></button>
+              <figcaption class="mono" data-i18n="gate.fig">按实际功能重绘的示意界面 · 演示数据，不是真实会话</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- E: office workflow -->
+      <article class="case case-compact" id="case-office"><span id="office-demo" class="anchor-alias"></span>
+        <header class="case-head">
+          <span class="case-id mono">03.E</span>
+          <span class="case-cat mono" data-i18n="office.category">办公与财务流转</span>
+          <span class="status" data-phase="half" data-i18n="office.status">演示站已发布 · 2026 年 9 月</span>
+          <button type="button" class="share mono" data-share="case-office" data-i18n="share">复制案例链接</button>
+        </header>
+        <div class="compact-body">
+          <h3 class="case-title" data-i18n="office.title">一份申请，从补齐资料到审批办理。</h3>
+          <p data-i18n="office.desc">为教育出版机构开发：申请与附件、缺件补正、角色待办、审批退回、费用汇总和操作记录，串成一段可追踪的流程。正式账号与业务试用另行推进。不是总账、审计或报税系统。</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 04 Services -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker mono" data-i18n="svc.kicker">04 · 服务</p>
+        <div>
+          <h2 data-i18n="svc.title">五个合作入口，可以单做，也可以串起来。</h2>
+          <p class="lead" data-i18n="svc.lead">大多数客户从一次诊断开始。每项服务单独约定范围、交付和验收方式。</p>
+        </div>
+      </header>
+      <div class="svc-table" role="list">
+        <div class="svc-row svc-labels mono" aria-hidden="true"><span></span><span data-i18n="svc.for">适合</span><span data-i18n="svc.get">交付</span><span data-i18n="svc.ok">怎么算成功</span></div>
+        <div class="svc-row reveal" role="listitem"><div class="svc-name"><span class="mono">S1</span><h3 data-i18n="svc.1.t">场景诊断</h3><span class="status" data-phase="new" data-i18n="svc.1.tag">新推出 · 方法来自已有项目前期</span></div><p><b class="mono" data-i18n="svc.for">适合</b><span data-i18n="svc.1.for">知道 AI 有用，但不确定先做哪件事。</span></p><p><b class="mono" data-i18n="svc.get">交付</b><span data-i18n="svc.1.get">流程走查、场景优先级、资料与权限边界、分期路线图。</span></p><p><b class="mono" data-i18n="svc.ok">怎么算成功</b><span data-i18n="svc.1.ok">一份你看得懂、能据此决策的路线图。</span></p></div>
+        <div class="svc-row reveal" role="listitem"><div class="svc-name"><span class="mono">S2</span><h3 data-i18n="svc.2.t">系统落地</h3><span class="status" data-phase="full" data-i18n="svc.2.tag">已交付</span></div><p><b class="mono" data-i18n="svc.for">适合</b><span data-i18n="svc.2.for">流程散在表格、聊天记录和人工里。</span></p><p><b class="mono" data-i18n="svc.get">交付</b><span data-i18n="svc.2.get">业务系统、团队工作台或本机工具，附使用说明。</span></p><p><b class="mono" data-i18n="svc.ok">怎么算成功</b><span data-i18n="svc.2.ok">在约定样本和流程上跑通，团队愿意天天用。</span></p></div>
+        <div class="svc-row reveal" role="listitem"><div class="svc-name"><span class="mono">S3</span><h3 data-i18n="svc.3.t">可控 AI 接入</h3><span class="status" data-phase="half" data-i18n="svc.3.tag">演示与小组验证</span></div><p><b class="mono" data-i18n="svc.for">适合</b><span data-i18n="svc.3.for">想把模型接进现有系统，又担心资料外流或回答失控。</span></p><p><b class="mono" data-i18n="svc.get">交付</b><span data-i18n="svc.3.get">统一模型网关、输入输出护栏、影子评测和人工出口。</span></p><p><b class="mono" data-i18n="svc.ok">怎么算成功</b><span data-i18n="svc.3.ok">每次调用可追溯；高风险问题按规则转人工。</span></p></div>
+        <div class="svc-row reveal" role="listitem"><div class="svc-name"><span class="mono">S4</span><h3 data-i18n="svc.4.t">AI 搜索可见度（GEO）</h3><span class="status" data-phase="full" data-i18n="svc.4.tag">已交付检测</span></div><p><b class="mono" data-i18n="svc.for">适合</b><span data-i18n="svc.4.for">客户开始用 AI 搜索来找服务的机构。</span></p><p><b class="mono" data-i18n="svc.get">交付</b><span data-i18n="svc.4.get">多引擎检测报告与明细、内容纠错清单、按月复测。</span></p><p><b class="mono" data-i18n="svc.ok">怎么算成功</b><span data-i18n="svc.4.ok">同一口径下，被提及、被正确描述的比例的变化。</span></p></div>
+        <div class="svc-row reveal" role="listitem"><div class="svc-name"><span class="mono">S5</span><h3 data-i18n="svc.5.t">接管与持续运维</h3><span class="status" data-phase="full" data-i18n="svc.5.tag">运行中</span></div><p><b class="mono" data-i18n="svc.for">适合</b><span data-i18n="svc.5.for">已有平台没人管，或想换一个能长期负责的技术团队。</span></p><p><b class="mono" data-i18n="svc.get">交付</b><span data-i18n="svc.5.get">非破坏性评估、资产盘点、试运维，运维与二次开发分线管理。</span></p><p><b class="mono" data-i18n="svc.ok">怎么算成功</b><span data-i18n="svc.5.ok">问题有记录、有负责人、出了错能回退。</span></p></div>
       </div>
-    </article>
-    <article class="evidence-case geo-evidence-case" id="case-geo">
-      <div class="case-overview"><div class="case-eyebrow"><span class="case-number">03</span><span class="case-category" data-i18n="geo.category">医疗 GEO · AI 搜索可见度</span></div><h3 data-i18n="geo.title">把 AI 搜索中的问题，变成可跟进的工作。</h3><p class="case-description" data-i18n="e.geo.desc">按品牌词、泛需求、费用及到院信息等问题分组，检查模型回答、引用依据和竞品同屏，再形成内容纠错与复测清单。</p><p class="evidence-status" data-i18n="e.geo.status">已有多引擎检测、报告及 CSV 明细导出</p><button class="text-link share-case" data-share="case-geo" data-i18n="share">复制本案例链接</button></div>
-      <div class="case-evidence"><div class="geo-engine-list"><span data-i18n="e.geo.engines">检测接入</span><p>DeepSeek <span>/</span> Kimi <span>/</span> Qwen <span>/</span> Doubao</p></div><div class="evidence-rows geo-rows"><div><h4 data-i18n="e.geo.dimensions">报告维度</h4><p data-i18n="e.geo.dimensions.d">可见性 · 推荐强度 · 事实准确性 · 证据质量 · 专科匹配度</p></div><div><h4 data-i18n="e.geo.exports">交付明细</h4><p data-i18n="e.geo.exports.d">问题分类、模型与原始回答、是否提及、竞品、扣分问题及综合说明。</p></div><div><h4 data-i18n="e.geo.measure">复测方式</h4><p data-i18n="e.geo.measure.d">固定问题组和引擎范围，记录检测日期；在一致口径下比较结果。</p></div></div><p class="scope-note" data-i18n="e.geo.scope">已有检测不等于保证排名或引用。不同批次不能直接相减作为效果；提升幅度需有同口径前后记录。</p></div>
-    </article>
-    <article class="office-summary" id="case-office"><span id="office-demo" class="anchor-alias"></span><div><p class="case-category" data-i18n="office.category">办公与财务流转</p><h3 data-i18n="office.title">一份申请，从补齐资料到审批办理。</h3><p data-i18n="e.office.short">申请与附件、缺件补正、角色待办、审批退回、费用汇总及操作记录，串成一段可追踪的流程。</p></div><div><p class="evidence-status" data-i18n="office.evidence">2026 年 9 月 14 日完成改版演示站发布与验证；正式账号及业务试用另行推进。</p><p class="scope-note" data-i18n="office.boundary">用于办公申请和财务流转，不是总账、审计意见或报税系统；专业判断由相应人员负责。</p><button class="text-link share-case" data-share="case-office" data-i18n="share">复制本案例链接</button></div></article>
-  </div></section>
+    </div>
+  </section>
 
-  <section class="deliverables wrap" id="deliverables"><span id="lab" class="anchor-alias"></span><div class="delivery-heading"><h2 data-i18n="e.delivery.title">合作之后，具体拿到什么。</h2><p data-i18n="e.delivery.lead">交付内容按项目范围约定，能看懂、能验收，也能交接给下一位同事。</p></div><div class="delivery-list"><article><span class="delivery-number">01</span><h3 data-i18n="e.delivery.1.t">业务判断</h3><p data-i18n="e.delivery.1.d">场景清单、优先级、资料与权限边界、分期路线图。</p></article><article><span class="delivery-number">02</span><h3 data-i18n="e.delivery.2.t">可用的成果</h3><p data-i18n="e.delivery.2.d">业务原型、系统功能、可使用的文件或报表，以及使用说明。</p></article><article><span class="delivery-number">03</span><h3 data-i18n="e.delivery.3.t">验证与交接</h3><p data-i18n="e.delivery.3.d">样本结果、修改记录、已知限制；涉及开发时提供约定源码、部署与恢复资料。</p></article><article><span class="delivery-number">04</span><h3 data-i18n="e.delivery.4.t">持续改进</h3><p data-i18n="e.delivery.4.d">问题清单、后续负责人、复盘记录与下一阶段的改进范围。</p></article></div></section>
+  <!-- 05 Boundaries -->
+  <section class="section boundaries" id="boundaries"><span id="ai-method" class="anchor-alias"></span>
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker mono" data-i18n="bd.kicker">05 · 边界</p>
+        <div>
+          <h2 data-i18n="bd.title">AI 负责整理，人负责决定。</h2>
+          <p class="lead" data-i18n="bd.lead">涉及会员、患者和付款这些高风险的事，我们先想的是边界怎么定，而不是 AI 能做多少。</p>
+        </div>
+      </header>
+      <figure class="diagram gateway" id="fig-gateway">
+        <p class="mono fig-label" data-i18n="gw.label">图 02 · 可控 AI 接入的结构</p>
+        <ol class="gw">
+          <li class="gw-node"><strong data-i18n="gw.app">你的业务系统</strong><span data-i18n="gw.app.d">不持有模型密钥</span></li>
+          <li class="gw-node guard"><strong data-i18n="gw.in">输入护栏</strong><span data-i18n="gw.in.d">资料分级 · 脱敏 · 注入检查</span></li>
+          <li class="gw-node core"><strong data-i18n="gw.gate">模型网关</strong><span data-i18n="gw.gate.d">统一入口 · 路由与降级 · 调用记录 · 额度</span></li>
+          <li class="gw-node model"><strong data-i18n="gw.model">模型</strong><span class="mono">DeepSeek · Qwen · Doubao · Kimi · …</span></li>
+          <li class="gw-node guard"><strong data-i18n="gw.out">输出护栏</strong><span data-i18n="gw.out.d">要求来源 · 格式校验 · 工具白名单</span></li>
+          <li class="gw-node human"><strong data-i18n="gw.human">人工出口</strong><span data-i18n="gw.human.d">命中规则时：金额、承诺、个案判断 → 转给人</span></li>
+        </ol>
+        <span class="gw-pulse" aria-hidden="true"></span>
+      </figure>
+      <ol class="method reveal-group">
+        <li class="reveal"><span class="mono">M1</span><h3 data-i18n="m.1.t">资料与调用范围</h3><p data-i18n="m.1.d">先确认哪些资料可以传给模型、在哪里处理和保存；模型入口统一管理，按需设置额度和记录。</p></li>
+        <li class="reveal"><span class="mono">M2</span><h3 data-i18n="m.2.t">权限由系统执行</h3><p data-i18n="m.2.d">只开放任务需要的资料和工具；读取、修改、发送分开授权，不让模型自己判断有没有权限。</p></li>
+        <li class="reveal"><span class="mono">M3</span><h3 data-i18n="m.3.t">输出能回头核对</h3><p data-i18n="m.3.d">保留原件、引用或页码；不确定的字段进入待核清单，关键写入和对外动作经人确认。</p></li>
+        <li class="reveal"><span class="mono">M4</span><h3 data-i18n="m.4.t">上线前有比较，上线后有退路</h3><p data-i18n="m.4.d">用同一批代表样本和失败样例比对；保留版本、回退和复测安排。</p></li>
+      </ol>
+      <p class="refs"><span data-i18n="m.refs">设计参考（公开方法，不代表认证或背书）：</span> <a href="https://genai.owasp.org/llmrisk/llm062025-excessive-agency/" target="_blank" rel="noopener noreferrer">OWASP · Excessive Agency ↗</a> <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/" target="_blank" rel="noopener noreferrer">NIST · AI RMF ↗</a></p>
+    </div>
+  </section>
 
-  <section class="service-section wrap" id="services"><div class="service-head"><h2 data-i18n="svc.title">从系统到 AI 到运维，一站做齐。</h2><p data-i18n="svc.lead">业务系统、可控 AI、AI 搜索可见度、平台接管，你不用在几家供应商之间来回对接。</p></div><div class="service-list"><details open><summary><span data-i18n="svc.1.t">业务系统与工作台搭建</span><span aria-hidden="true">＋</span></summary><p data-i18n="svc.1.d">按你实际的流程搭后台系统和团队工作台，把散在表格和人工里的环节固定下来。</p></details><details><summary><span data-i18n="svc.2.t">可控 AI 接入</span><span aria-hidden="true">＋</span></summary><p data-i18n="svc.2.d">把 AI 接进你现有的系统，讲清它能做什么、边界在哪、出错怎么退回，人始终可复核。</p><div class="control-chain"><span data-i18n="svc.2.a1">网关</span><span aria-hidden="true">→</span><span data-i18n="svc.2.a2">护栏</span><span aria-hidden="true">→</span><span data-i18n="svc.2.a3">影子模式</span><span aria-hidden="true">→</span><span data-i18n="svc.2.a4">人工出口</span></div><p class="muted" data-i18n="ai.scope">按项目配置模型入口、权限、规则检查和复核出口，接入前明确资料范围与调用路径。</p></details><details><summary><span data-i18n="svc.3.t">AI 搜索可见度（GEO）</span><span aria-hidden="true">＋</span></summary><p data-i18n="svc.3.d">让品牌和内容更容易被 ChatGPT、豆包、DeepSeek 检索和引用。先做可见度诊断，再按范围优化——不承诺必然被引用。</p></details><details><summary><span data-i18n="svc.4.t">系统接管与持续运维</span><span aria-hidden="true">＋</span></summary><p data-i18n="svc.4.d">接手已有平台，先做结构与风险评估，再负责日常运维和按需的二次开发。</p></details></div></section>
-
-  <section class="integration-method wrap" id="ai-method"><div class="method-heading"><h2 data-i18n="e.method.title">AI 接入，要把这些事做实。</h2><p data-i18n="e.method.lead">作为项目设计和验收要点，按实际场景落实。</p></div><div class="method-list"><article><span class="method-number">01</span><div><h3 data-i18n="e.method.1.t">资料与调用范围</h3><p data-i18n="e.method.1.d">确认哪些资料可以传给模型、在哪里处理与保存；模型入口统一管理，按需设置调用额度和记录。</p></div></article><article><span class="method-number">02</span><div><h3 data-i18n="e.method.2.t">权限由系统执行</h3><p data-i18n="e.method.2.d">只开放任务所需的资料和工具；读取、修改、发送分开授权，不能让模型自己判断有没有权限。</p></div></article><article><span class="method-number">03</span><div><h3 data-i18n="e.method.3.t">输出能回头核对</h3><p data-i18n="e.method.3.d">保留原件、引用或页码；不确定的字段进入待核清单，关键写入和对外动作经人确认。</p></div></article><article><span class="method-number">04</span><div><h3 data-i18n="e.method.4.t">上线前有比较，上线后有退路</h3><p data-i18n="e.method.4.d">用同一批代表样本和失败样例比对，记录质量、修改量及完整处理用时；保留版本、回退和后续复测安排。</p></div></article></div><p class="method-refs"><span data-i18n="e.method.refs">设计参考：</span><a href="https://genai.owasp.org/llmrisk/llm062025-excessive-agency/" target="_blank" rel="noopener noreferrer">OWASP · Excessive Agency ↗</a><a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/" target="_blank" rel="noopener noreferrer">NIST · AI RMF ↗</a></p></section>
-
-  <section class="cooperation wrap" id="approach"><h2 data-i18n="ap.title">诊断、落地、陪跑，同一批人。</h2><div class="cooperation-steps"><div><span class="cooperation-n">01</span><h3 data-i18n="ap.1.t">先把事情看清楚</h3><p data-i18n="ap.1.d">先做一次 AI 可行性诊断：把流程走一遍、把数据盘一盘，再按“值不值得做、风险多大、数据够不够”给每个场景打分，最后给你一份看得懂的路线图。</p></div><div><span class="cooperation-n">02</span><h3 data-i18n="ap.2.t">一件一件做</h3><p data-i18n="ap.2.d">选中的场景先在影子模式里跑通、跟人工比对，确认真的靠谱再放开来用。一项一报价，见效了再往下做。</p></div><div><span class="cooperation-n">03</span><h3 data-i18n="ap.3.t">长期陪着</h3><p data-i18n="ap.3.d">上线不是终点。日常运维、每月一起复盘、需要时再做二次开发，系统一直有人在管着。</p></div></div></section>
-
-  <section class="principles wrap" id="boundaries"><div class="principles-title"><span class="bracket" aria-hidden="true">[ ]</span><h2 data-i18n="bd.title">AI 负责整理，人负责决定。</h2><p data-i18n="bd.lead">涉及会员、患者和付款这些高风险的事，我们先想的是边界怎么定，而不是 AI 能做多少。</p></div><div class="principle-list"><div><h3 data-i18n="bd.2t">先立规矩，再接 AI</h3><p data-i18n="bd.2d">数据怎么分级、谁能看、存哪里、留多久，接进 AI 之前先定清楚。</p></div><div><h3 data-i18n="boundary.sources.title">来源与缺口一起看</h3><p data-i18n="boundary.sources.desc">按场景保留原始资料和待核事项。找不到依据时，留下问题交人确认。</p></div><div><h3 data-i18n="bd.4t">系统只打下手</h3><p data-i18n="bd.4d">收件、分类、把缺口标出来，剩下的判断交给人。</p></div></div></section>
-
-  <section class="contact wrap" id="contact"><p class="section-label" data-i18n="ct.title">联系我们</p><h2 data-i18n="ct.lead">把你手上最想做、却一直没做成的那件事告诉我们，我们先一起把它看清楚。</h2><div class="contact-actions"><a class="button primary" href="mailto:riversense11@gmail.com"><span data-i18n="ct.btn">发邮件给我们</span><span aria-hidden="true">↗</span></a><button class="text-link" id="copy-contact" data-i18n="contact.copy">复制联系方式</button><button class="text-link" id="download-brief" data-i18n="brief.download">带走一页介绍 ↓</button></div><div class="contact-details"><a href="mailto:riversense11@gmail.com">riversense11@gmail.com</a><a href="tel:+8618721532448">+86 187 2153 2448</a></div><p class="contact-note" data-i18n="ct.note">如果这个页面是别人分享给你的，也可以直接联系分享给你的人。</p></section>
+  <!-- 06 Contact -->
+  <section class="section contact" id="contact">
+    <div class="wrap contact-grid">
+      <p class="kicker mono" data-i18n="ct.kicker">06 · 联系</p>
+      <div>
+        <h2 data-i18n="ct.title">把你最想做、却一直没做成的那件事告诉我们。我们先一起把它看清楚。</h2>
+        <p class="lead" data-i18n="ct.lead">一封邮件、几句话就够：你的业务是什么，那件事卡在哪里。我们会回复是否适合、可以怎样开始。</p>
+        <div class="actions">
+          <a class="button primary" href="mailto:riversense11@gmail.com"><span data-i18n="ct.btn">发邮件给我们</span><span class="arrow" aria-hidden="true">→</span></a>
+          <button type="button" class="button ghost" id="copy-contact" data-i18n="contact.copy">复制联系方式</button>
+          <button type="button" class="button ghost" id="download-brief" data-i18n="brief.download">下载一页介绍</button>
+        </div>
+        <p class="contact-lines mono"><a href="mailto:riversense11@gmail.com">riversense11@gmail.com</a><a href="tel:+8618721532448">+86 187 2153 2448</a></p>
+        <p class="contact-note" data-i18n="ct.note">如果这个页面是别人分享给你的，也可以直接联系分享给你的人。</p>
+      </div>
+    </div>
+  </section>
 </main>
-<footer class="footer wrap"><div class="footer-top"><span>© 2026 佳裕云智 · Junemoon</span><span data-i18n="ft.legalName">佳裕云智（深圳）科技有限公司</span><div class="languages" role="group" aria-label="Language"><button data-lang="zh-cn" aria-pressed="true">简体中文</button><button data-lang="zh-hk" aria-pressed="false">繁體中文</button><button data-lang="en" aria-pressed="false">English</button></div></div><div class="footer-wordmark" aria-hidden="true">Junemoon<span>↗</span></div></footer>
-<dialog id="image-dialog" aria-labelledby="image-caption"><button id="close-image" class="button" data-i18n="close">关闭</button><img id="full-image" alt=""><p id="image-caption"></p><a class="text-link" id="image-original" href="assets/document-sample.png" target="_blank" rel="noopener" data-i18n="e.scan.open">打开原图 ↗</a></dialog>
-<dialog id="copy-dialog" aria-labelledby="copy-heading"><h2 id="copy-heading" data-i18n="copy.manual">请选择并复制以下内容</h2><textarea id="copy-text" readonly aria-labelledby="copy-heading"></textarea><button id="close-copy" class="button" data-i18n="close">关闭</button></dialog>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <a class="brand" href="#top"><img src="assets/logo.png" width="22" height="25" alt=""><span>佳裕云智 · Junemoon</span></a>
+    <span class="mono" data-i18n="ft.legalName">佳裕云智（深圳）科技有限公司</span>
+    <span class="mono">© 2026 · myjunemoon.com</span>
+    <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="zh-cn" aria-pressed="true" lang="zh-Hans">简体中文</button><button type="button" data-lang="zh-hk" aria-pressed="false" lang="zh-Hant">繁體中文</button><button type="button" data-lang="en" aria-pressed="false" lang="en">English</button></div>
+    <a class="mono to-top" href="#top" data-i18n="ft.top">回到顶部 ↑</a>
+  </div>
+</footer>
+
+<dialog id="image-dialog" aria-labelledby="image-caption"><div class="dialog-bar"><p id="image-caption"></p><a class="mono" id="image-original" href="assets/acct-review.webp" target="_blank" rel="noopener" data-i18n="open.original">打开原图 ↗</a><button type="button" id="close-image" class="button ghost" data-i18n="close">关闭</button></div><img id="full-image" alt=""></dialog>
+<dialog id="copy-dialog" aria-labelledby="copy-heading"><h2 id="copy-heading" data-i18n="copy.manual">请选择并复制以下内容</h2><textarea id="copy-text" readonly aria-labelledby="copy-heading"></textarea><button type="button" id="close-copy" class="button ghost" data-i18n="close">关闭</button></dialog>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<noscript><p class="noscript-note">页面正文可直接阅读；开启 JavaScript 后可切换语言、放大图片及下载介绍。</p></noscript>
+<noscript><p class="noscript-note">页面正文可直接阅读；开启 JavaScript 后可切换语言、放大图片和下载介绍。</p></noscript>
 </body>
 </html>

@@ -1,51 +1,173 @@
 (() => {
- 'use strict';
- const dicts=window.SITE_COPY;
- const locales={'zh-cn':'zh-Hans-CN','zh-hk':'zh-Hant-HK',en:'en'};
- const origin='https://myjunemoon.com/';
- const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
- let lang='zh-cn',toastTimer,currentImageCaption='';
- const t=k=>dicts[lang][k]??k;
- const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const tr=k=>escape(t(k));
- function setLang(next,remember=true){
-   if(!dicts[next])return;
-   lang=next;document.documentElement.lang=locales[lang];document.title=t('hero.title');
-   $$('[data-i18n]').forEach(e=>e.textContent=t(e.dataset.i18n));
-   $$('[data-alt]').forEach(e=>e.alt=t(e.dataset.alt));
-   $$('[data-aria]').forEach(e=>e.setAttribute('aria-label',t(e.dataset.aria)));
-   $$('[data-lang]').forEach(e=>e.setAttribute('aria-pressed',String(e.dataset.lang===lang)));
-   $('#hero-heading').innerHTML=tr('hero.line1')+'<br><span>'+tr('hero.line2')+'</span>';
-   const description=t('hero.sub')+' '+t('hero.offer');
-   $('meta[name="description"]').content=description;
-   $('meta[property="og:title"]').content=t('hero.title');
-   $('meta[property="og:description"]').content=description;
-   if(currentImageCaption){$('#image-caption').textContent=t(currentImageCaption);$('#full-image').alt=t(currentImageCaption);}
-   if(remember){try{localStorage.setItem('jy_lang',lang);const url=new URL(location.href);url.searchParams.set('lang',lang);history.replaceState(null,'',url);}catch{}}
- }
- function notify(s){$('#toast').textContent=s;$('#toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),4000);}
- function closeMenu(){const open=$('.menu-button').getAttribute('aria-expanded')==='true';$('.menu-button').setAttribute('aria-expanded','false');$('#mobile-nav').hidden=true;return open;}
- $$('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
- $('.menu-button').addEventListener('click',()=>{const open=$('.menu-button').getAttribute('aria-expanded')==='true';$('.menu-button').setAttribute('aria-expanded',String(!open));$('#mobile-nav').hidden=open;});
- $$('#mobile-nav a').forEach(a=>a.addEventListener('click',closeMenu));
- document.addEventListener('keydown',e=>{if(e.key==='Escape'&&closeMenu())$('.menu-button').focus();});
- document.addEventListener('click',e=>{if(!e.target.closest('.nav')&&!e.target.closest('#mobile-nav'))closeMenu();});
- matchMedia('(min-width:801px)').addEventListener('change',e=>{if(e.matches)closeMenu();});
- async function copy(s){try{await navigator.clipboard.writeText(s);notify(t('copy.success'));}catch{$('#copy-text').value=s;$('#copy-dialog').showModal();$('#copy-text').focus();$('#copy-text').select();}}
- $('#copy-contact').addEventListener('click',()=>copy(t('brand')+' · Junemoon\nriversense11@gmail.com\n+86 187 2153 2448\n'+origin));
- $$('.share-case').forEach(b=>b.addEventListener('click',()=>{const u=new URL(origin);u.searchParams.set('lang',lang);u.hash=b.dataset.share;copy(u.href);}));
- $('#close-copy').addEventListener('click',()=>$('#copy-dialog').close());
- $$('[data-image]').forEach(b=>b.addEventListener('click',()=>{currentImageCaption=b.dataset.caption;$('#full-image').src=b.dataset.image;$('#image-original').href=b.dataset.image;$('#full-image').alt=t(currentImageCaption);$('#image-caption').textContent=t(currentImageCaption);$('#image-dialog').showModal();}));
- $('#close-image').addEventListener('click',()=>$('#image-dialog').close());
- $$('dialog').forEach(d=>d.addEventListener('click',e=>{const r=d.getBoundingClientRect();if(e.target===d&&(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom))d.close();}));
- function deepLink(){let hash;try{hash=decodeURIComponent(location.hash.slice(1));}catch{return;}const el=document.getElementById(hash);if(el)requestAnimationFrame(()=>el.scrollIntoView({block:'start',behavior:'instant'}));}
- window.addEventListener('hashchange',deepLink);
- function downloadBrief(){
-   const blocks=[['platform.category','e.edu.desc','e.edu.status'],['e.scan.category','e.scan.desc','e.scan.status'],['geo.category','e.geo.desc','e.geo.status']];
-   const content=`<!doctype html><html lang="${locales[lang]}"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${tr('brief.title')}</title><style>body{font:14px/1.75 -apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif;color:#14212f;max-width:800px;margin:35px auto;padding:0 28px}h1{font-size:28px;line-height:1.3;color:#075ccc}h2{font-size:19px;margin:22px 0 12px}h3{font-size:15px;margin:14px 0 5px}p{margin:5px 0}small{color:#536172}a{color:#075ccc}header{border-bottom:1px solid #ccd8e7;padding-bottom:15px}footer{border-top:1px solid #ccd8e7;margin-top:24px;padding-top:15px}.delivery{display:grid;grid-template-columns:1fr 1fr;gap:5px 22px}@media print{body{margin:0;font-size:10px;line-height:1.5}h1{font-size:22px}h2{font-size:16px;margin-top:14px}h3{font-size:12px;margin-top:9px}footer{margin-top:15px}a{color:inherit}}</style><header><h1>${tr('brief.title')}</h1><p>${tr('hero.sub')} ${tr('ap.title')}</p><p>${tr('inc.lead')}</p></header><h2>${tr('work.title')}</h2>${blocks.map(b=>`<section><h3>${tr(b[0])}</h3><p>${tr(b[1])}</p><small>${tr(b[2])}</small></section>`).join('')}<h2>${tr('e.delivery.title')}</h2><div class="delivery">${[1,2,3,4].map(i=>`<section><h3>${tr('e.delivery.'+i+'.t')}</h3><p>${tr('e.delivery.'+i+'.d')}</p></section>`).join('')}</div><footer><strong>${tr('ft.legalName')}</strong><p>riversense11@gmail.com · +86 187 2153 2448</p><p><a href="${origin}?lang=${lang}">${origin}</a></p><small>${tr('e.brief.note')}</small></footer></html>`;
-   const url=URL.createObjectURL(new Blob([content],{type:'text/html;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='Junemoon-company-brief-'+lang+'.html';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);notify(t('brief.ready'));
- }
- $('#download-brief').addEventListener('click',downloadBrief);
- try{const q=new URLSearchParams(location.search).get('lang');let stored;try{stored=localStorage.getItem('jy_lang');}catch{}lang=dicts[q]?q:(dicts[stored]?stored:'zh-cn');}catch{}
- setLang(lang,false);deepLink();
+  'use strict';
+  const dicts = window.SITE_COPY;
+  const locales = { 'zh-cn': 'zh-Hans-CN', 'zh-hk': 'zh-Hant-HK', en: 'en' };
+  const origin = 'https://myjunemoon.com/';
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const calm = matchMedia('(prefers-reduced-motion: reduce)');
+  let lang = 'zh-cn', toastTimer, currentCaption = '';
+  const t = k => (dicts[lang] && dicts[lang][k]) ?? k;
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const plain = s => String(s).replace(/<br\s*\/?>/g, ' ').replace(/<[^>]+>/g, '');
+
+  /* Language */
+  function setLang(next, remember = true) {
+    if (!dicts[next]) return;
+    const changed = next !== lang;
+    lang = next;
+    document.documentElement.lang = locales[lang];
+    document.title = t('meta.title');
+    $$('[data-i18n]').forEach(el => {
+      el.textContent = t(el.dataset.i18n);
+      if (changed && remember && !calm.matches) { el.classList.remove('swap'); void el.offsetWidth; el.classList.add('swap'); }
+    });
+    // Dictionary strings are our own content; only <br> and <em> are used.
+    $$('[data-i18n-html]').forEach(el => { el.innerHTML = t(el.dataset.i18nHtml); });
+    $$('[data-alt]').forEach(el => { el.alt = t(el.dataset.alt); });
+    $$('[data-aria]').forEach(el => el.setAttribute('aria-label', t(el.dataset.aria)));
+    $$('[data-lang]').forEach(el => el.setAttribute('aria-pressed', String(el.dataset.lang === lang)));
+    $('meta[name="description"]').content = t('meta.desc');
+    $('meta[property="og:title"]').content = t('meta.title');
+    $('meta[property="og:description"]').content = t('meta.desc');
+    if (currentCaption) { $('#image-caption').textContent = t(currentCaption); $('#full-image').alt = t(currentCaption); }
+    if (remember) {
+      try { localStorage.setItem('jy_lang', lang); } catch {}
+      try { const url = new URL(location.href); url.searchParams.set('lang', lang); history.replaceState(null, '', url); } catch {}
+    }
+  }
+  $$('[data-lang]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+
+  /* Navigation */
+  const nav = $('#nav'), menuBtn = $('.menu-button'), mobile = $('#mobile-nav');
+  function closeMenu() { const open = menuBtn.getAttribute('aria-expanded') === 'true'; menuBtn.setAttribute('aria-expanded', 'false'); mobile.hidden = true; return open; }
+  menuBtn.addEventListener('click', () => { const open = menuBtn.getAttribute('aria-expanded') === 'true'; menuBtn.setAttribute('aria-expanded', String(!open)); mobile.hidden = open; if (!open) $('a', mobile).focus(); });
+  $$('a', mobile).forEach(a => a.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && closeMenu()) menuBtn.focus(); });
+  document.addEventListener('click', e => { if (!e.target.closest('.nav') && !e.target.closest('#mobile-nav')) closeMenu(); });
+  matchMedia('(min-width:1081px)').addEventListener('change', e => { if (e.matches) closeMenu(); });
+  const onScroll = () => nav.classList.toggle('scrolled', scrollY > 8);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  const io = 'IntersectionObserver' in window;
+  if (io) {
+    const links = new Map($$('.nav-links a').map(a => [a.getAttribute('href').slice(1), a]));
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(en => { if (en.isIntersecting) links.forEach((a, id) => a.classList.toggle('active', id === en.target.id)); });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    links.forEach((_, id) => { const s = document.getElementById(id); if (s) spy.observe(s); });
+    const top = new IntersectionObserver(([en]) => { if (en.isIntersecting) links.forEach(a => a.classList.remove('active')); }, { rootMargin: '0px 0px -60% 0px' });
+    top.observe($('#top'));
+  }
+
+  /* Reveal on first view — elements are visible unless JS marks them pending. */
+  function onFirstView(els, fn, opts = { rootMargin: '0px 0px -12% 0px' }) {
+    if (!io) { els.forEach(fn); return; }
+    const ob = new IntersectionObserver(entries => entries.forEach(en => { if (en.isIntersecting) { ob.unobserve(en.target); fn(en.target); } }), opts);
+    els.forEach(el => ob.observe(el));
+  }
+  if (!calm.matches && io) {
+    $$('.reveal-group').forEach(g => $$('.reveal', g).forEach((el, i) => el.style.setProperty('--i', i)));
+    const reveals = $$('.reveal').filter(el => el.getBoundingClientRect().top > innerHeight * .9);
+    reveals.forEach(el => el.classList.add('pending'));
+    onFirstView(reveals, el => el.classList.remove('pending'));
+    const annotated = $$('.annotated'); annotated.forEach(el => el.classList.add('pending'));
+    onFirstView(annotated, el => el.classList.remove('pending'), { rootMargin: '0px 0px -25% 0px' });
+    const geo = $$('.geo-chart'); geo.forEach(el => el.classList.add('pending'));
+    onFirstView(geo, el => el.classList.remove('pending'), { rootMargin: '0px 0px -20% 0px' });
+    onFirstView([$('#fig-gateway')], fig => {
+      $$('.gw-node', fig).forEach((n, i) => { setTimeout(() => n.classList.add('lit'), 160 * i); setTimeout(() => n.classList.remove('lit'), 160 * i + 900); });
+    }, { rootMargin: '0px 0px -30% 0px' });
+  }
+
+  /* Fig 01: the execution-cost line drops; rows it passes become worth doing. */
+  const fig = $('#fig-threshold');
+  if (fig) {
+    const rows = $$('.th-rows li', fig);
+    const OLD = .82, NEW = .38, DUR = 1500;
+    let timers = [];
+    const inverse = y => 1 - Math.cbrt(1 - y); // time fraction at which the eased line reaches y
+    function show(state, animate) {
+      timers.forEach(clearTimeout); timers = [];
+      $$('[data-th]', fig).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.th === state)));
+      fig.classList.toggle('animate', animate);
+      fig.classList.toggle('is-before', state === 'before');
+      rows.forEach(li => {
+        const v = parseFloat(li.style.getPropertyValue('--v'));
+        const viable = state === 'after' ? v > NEW : v > OLD;
+        if (!animate || state === 'before') { li.classList.toggle('viable', viable); return; }
+        const frac = inverse(Math.min(1, Math.max(0, (OLD - v) / (OLD - NEW))));
+        timers.push(setTimeout(() => li.classList.toggle('viable', viable), frac * DUR));
+      });
+    }
+    $$('[data-th]', fig).forEach(b => b.addEventListener('click', () => show(b.dataset.th, !calm.matches)));
+    if (calm.matches || !io || !(window.CSS && CSS.registerProperty)) {
+      show('after', false);
+    } else {
+      show('before', false);
+      onFirstView([fig], () => setTimeout(() => show('after', true), 450), { threshold: .4 });
+    }
+  }
+
+  /* Copy, share, dialogs */
+  function notify(s) { const el = $('#toast'); el.textContent = s; el.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('show'), 3200); }
+  async function copy(s) {
+    try { await navigator.clipboard.writeText(s); notify(t('copy.success')); }
+    catch { $('#copy-text').value = s; $('#copy-dialog').showModal(); $('#copy-text').focus(); $('#copy-text').select(); }
+  }
+  $('#copy-contact').addEventListener('click', () => copy(t('brand') + ' · Junemoon\nriversense11@gmail.com\n+86 187 2153 2448\n' + origin));
+  $$('.share').forEach(b => b.addEventListener('click', () => { const u = new URL(origin); u.searchParams.set('lang', lang); u.hash = b.dataset.share; copy(u.href); }));
+  $('#close-copy').addEventListener('click', () => $('#copy-dialog').close());
+  $$('[data-image]').forEach(b => b.addEventListener('click', () => {
+    currentCaption = b.dataset.caption;
+    $('#full-image').src = b.dataset.image; $('#image-original').href = b.dataset.image;
+    $('#full-image').alt = t(currentCaption); $('#image-caption').textContent = t(currentCaption);
+    $('#image-dialog').showModal();
+  }));
+  $('#image-dialog').addEventListener('close', () => { currentCaption = ''; });
+  $('#close-image').addEventListener('click', () => $('#image-dialog').close());
+  $$('dialog').forEach(d => d.addEventListener('click', e => {
+    const r = d.getBoundingClientRect();
+    if (e.target === d && (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom)) d.close();
+  }));
+
+  function deepLink() {
+    let hash; try { hash = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+    const el = hash && document.getElementById(hash);
+    if (el) requestAnimationFrame(() => el.scrollIntoView({ block: 'start', behavior: 'instant' }));
+  }
+  addEventListener('hashchange', deepLink);
+
+  /* One-page brief, generated in the current language */
+  function downloadBrief() {
+    const tr = k => esc(plain(t(k)));
+    const cases = [['scan', 'scan.category', 'scan.title', 'scan.status', 'scan.did'], ['edu', 'edu.category', 'edu.title', 'edu.status', 'edu.did'], ['geo', 'geo.category', 'geo.title', 'geo.status', 'geo.did'], ['gate', 'gate.category', 'gate.title', 'gate.status', 'gate.did'], ['office', 'office.category', 'office.title', 'office.status', 'office.desc']];
+    const steps = [1, 2, 3, 4].map(i => `<li><b>${tr('ap.' + i + '.t')}</b> — ${tr('ap.' + i + '.g')}</li>`).join('');
+    const html = `<!doctype html><html lang="${locales[lang]}"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${tr('brief.title')}</title>
+<style>body{font:14px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;color:#0d1b2e;max-width:780px;margin:36px auto;padding:0 28px}h1{font-size:26px;line-height:1.3;margin:0 0 8px}h2{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#2e66c4;margin:26px 0 10px;font-family:ui-monospace,Consolas,monospace}h3{font-size:15px;margin:12px 0 2px}p,li{margin:4px 0;color:#2f3f54}small{color:#5f6e82;font-family:ui-monospace,Consolas,monospace;font-size:11.5px}header{border-bottom:1.5px solid #0d1b2e;padding-bottom:14px}ol{padding-left:18px}footer{border-top:1px solid #d7dee8;margin-top:24px;padding-top:12px}a{color:#2e66c4}@media print{body{margin:0;font-size:10.5px;line-height:1.5}h1{font-size:20px}h2{margin-top:14px}a{color:inherit}}</style>
+<header><h1>${tr('brief.title')}</h1><p>${tr('hero.lead')}</p></header>
+<h2>${tr('idea.title')}</h2><p>${tr('idea.lead')}</p>
+<h2>${tr('ap.title')}</h2><ol>${steps}</ol>
+<h2>${tr('brief.cases')}</h2>${cases.map(c => `<section><h3>${tr(c[2])}</h3><small>${tr(c[1])} · ${tr(c[3])}</small><p>${tr(c[4])}</p></section>`).join('')}
+<footer><strong>${tr('ft.legalName')}</strong><p>riversense11@gmail.com · +86 187 2153 2448 · <a href="${origin}?lang=${lang}">${origin}</a></p><small>${tr('brief.note')}</small></footer></html>`;
+    const url = URL.createObjectURL(new Blob([html], { type: 'text/html;charset=utf-8' }));
+    const a = document.createElement('a'); a.href = url; a.download = 'Junemoon-brief-' + lang + '.html';
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 2000);
+    notify(t('brief.ready'));
+  }
+  $('#download-brief').addEventListener('click', downloadBrief);
+
+  /* Initial language: ?lang= > stored > default */
+  try {
+    const q = new URLSearchParams(location.search).get('lang');
+    let stored; try { stored = localStorage.getItem('jy_lang'); } catch {}
+    lang = dicts[q] ? q : (dicts[stored] ? stored : 'zh-cn');
+  } catch {}
+  setLang(lang, false);
+  deepLink();
+  // Late layout (lazy images, fonts) can move the target; correct once if the visitor hasn't scrolled.
+  if (location.hash) {
+    let settled; requestAnimationFrame(() => { settled = scrollY; });
+    addEventListener('load', () => setTimeout(() => { if (Math.abs(scrollY - settled) < 4) deepLink(); }, 60), { once: true });
+  }
 })();
