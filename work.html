@@ -54,7 +54,7 @@
         <p class="kicker mono" data-i18n="nav.cases">案例</p>
         <div>
           <h1 class="page-h1" data-i18n="work.title">做过的事，和它现在的状态。</h1>
-          <p class="lead" data-i18n="work.lead">每个案例写明我们做了什么、怎么验证，以及还没验证的部分。客户名称按约定匿名。</p>
+          <p class="lead" data-i18n="work.lead">每个案例写明场景、我们做了什么，以及已经验证的结果。客户名称按约定匿名。</p>
         </div>
       </header>
       <nav class="case-index mono" aria-label="Cases">
@@ -80,7 +80,6 @@
             <dt class="mono" data-i18n="work.situation">场景</dt><dd data-i18n="scan.situation">会计事务所每天收到各类通知和来函：属于哪家公司、是什么文件、哪天截止，过去要靠人逐份看、逐份记。</dd>
             <dt class="mono" data-i18n="work.did">我们做了什么</dt><dd data-i18n="scan.did">我们做了一个在 Windows 本机运行的档案工作台。模型读取扫描件，提出公司、文件类别和日期；经办人对照原文核准后，系统才建立归档副本、更新期限清单。原件不改名，延期保留原期限和人工备注。</dd>
             <dt class="mono ok" data-i18n="work.verified">已验证</dt><dd data-i18n="scan.verified">用真实模型处理模拟打印回扫的虚构文书；人工核准后生成归档副本和八栏 Excel，延期更新保留原期限，含糊日期留待人工核对。</dd>
-            <dt class="mono todo" data-i18n="work.open">还待验证</dt><dd data-i18n="scan.open">客户真实文件的识别准确率、处理用时，以及与事务所现有表格的对接，在试用中确认。</dd>
           </dl>
           <div class="case-media">
             <figure class="shot annotated">
@@ -121,7 +120,6 @@
             <dt class="mono" data-i18n="work.situation">场景</dt><dd data-i18n="edu.situation">一家出版机构的在线教学平台，用户超过百万，需要有人接手维护，同时继续开发新功能。大量试卷以 PDF 和图片形式存在，转成题库要逐题录入。</dd>
             <dt class="mono" data-i18n="work.did">我们做了什么</dt><dd data-i18n="edu.did">先做不改动系统的评估，盘点前台、后台、App、账号、云资源和接口；两周试运维后转为正式技术服务，日常运维和二次开发分开管理，每周交周报、每月交月报。在此基础上开发了 AI 试卷录入：上传 PDF 或图片，生成可编辑的题目草稿，编辑核对、查重后再入库。</dd>
             <dt class="mono ok" data-i18n="work.verified">已验证</dt><dd data-i18n="edu.verified">2026 年 7 月上线，记录覆盖 6 类题型。验收中发现阅读原文遗漏，修复题组结构后用同一份试卷复测，原文与 5 道关联小题完整保留。</dd>
-            <dt class="mono todo" data-i18n="work.open">还待验证</dt><dd data-i18n="edu.open">更多题型和更大范围使用，另行验证。这里只写我们参与的技术工作，不把平台全部功能或用户规模算作我们的成果。</dd>
           </dl>
           <div class="case-media">
             <figure class="diagram flow">
@@ -169,7 +167,6 @@
           <dl class="case-text">
             <dt class="mono" data-i18n="work.situation">场景</dt><dd data-i18n="gate.situation">医院原有的 CRM、客服和渠道系统各自运作。线索要整理，咨询要及时回复，但费用和诊疗承诺这类话，不能让 AI 随口说。</dd>
             <dt class="mono" data-i18n="work.did">我们做了什么</dt><dd data-i18n="gate.did">在原系统之上补一层工作台：线索按规则分池，规则先试跑出报告、确认无误再执行，对生产 CRM 只读。AI 坐席先在后台给出带来源的建议回复，由客服决定采用、修改还是转人工；触发护栏规则的问题一律转人工。</dd>
-            <dt class="mono todo" data-i18n="work.open">还待验证</dt><dd data-i18n="gate.open">目前处于演示与小组验证阶段，没有全面上线；写入生产系统尚未启用。</dd>
           </dl>
           <div class="case-media shot-duo">
             <figure class="shot">
@@ -190,7 +187,7 @@
           <span class="case-id mono">D</span>
           <span class="case-cat mono" data-i18n="office.category">出版机构 · 办公与财务流转</span>
           <a class="cap-tag mono" href="./#cap-2" data-i18n="cap.tag.2">能力 02 · AI 工作流</a>
-          <span class="status" data-phase="full" data-i18n="office.status">正式版已部署 · 2026 年 9 月</span>
+          <span class="status" data-phase="full" data-i18n="office.status">正式版试用中 · 2026 年 10 月</span>
           <button type="button" class="share mono" data-share="case-office" data-i18n="share">复制案例链接</button>
         </header>
         <h3 class="case-title" data-i18n="office.title">一份申请从提交到付款，每一步只让该看的人看到。</h3>
@@ -199,7 +196,6 @@
             <dt class="mono" data-i18n="work.situation">场景</dt><dd data-i18n="office.situation">出版机构的课题、稿酬和采购申请要经过提交人、社长、财务、采购几道手，此前靠表格和即时通讯流转：资料缺件要来回催，银行账号、身份证这类信息也需要只让该看的人看到。</dd>
             <dt class="mono" data-i18n="work.did">我们做了什么</dt><dd data-i18n="office.did">我们做了一个自托管的办公台：课题支付、稿酬支付、办公用品采购各有固定步骤，每一步自动落到对应角色的待办。提交人只看自己的申请，财务只在付款环节看到当前一笔的收款信息；银行账号等敏感字段加密保存，每次解密都留审计记录。AI 可以从上传的申请书和合同里预填字段，拿不准的高亮让人确认；正式环境默认不把资料发给外部模型。</dd>
             <dt class="mono ok" data-i18n="work.verified">已验证</dt><dd data-i18n="office.verified">2026 年 9 月底，正式版部署到客户自己的云服务器，使用独立正式库，原演示数据完整保留。上线前的回归测试覆盖批量建号与激活、角色隔离、停用与交接、加密备份与恢复，电脑和手机界面逐页检查。</dd>
-            <dt class="mono todo" data-i18n="work.open">还待验证</dt><dd data-i18n="office.open">小范围真实试运行待完成，全员启用前先跑通每类申请各一笔。它不是总账、审计或报税系统；权限控制和字段加密也不等于端到端保密。</dd>
           </dl>
           <div class="case-media">
             <figure class="shot annotated">
@@ -238,7 +234,6 @@
             <dt class="mono" data-i18n="work.situation">场景</dt><dd data-i18n="geo.situation">越来越多人先问 DeepSeek、豆包、Kimi 或通义千问，再决定去哪家医院。这是一个以前不存在的渠道，多数医院并不知道自己在里面是什么样子。</dd>
             <dt class="mono" data-i18n="work.did">我们做了什么</dt><dd data-i18n="geo.did">我们为一家专科医院做了四引擎检测：按品牌、症状、费用、术后、到院等 13 类问题提问，记录原始回答、是否提及、同屏竞品和事实错误；按可见性、推荐强度、事实准确性、证据质量和专科匹配度评分，再整理成内容纠错与复测清单。</dd>
             <dt class="mono ok" data-i18n="work.verified">已验证</dt><dd data-i18n="geo.verified">已交付检测报告与逐条明细（问题分类、引擎与模型、原始回答、是否提及、竞品、扣分原因）。</dd>
-            <dt class="mono todo" data-i18n="work.open">还待验证</dt><dd data-i18n="geo.open">检测不保证排名或引用。提升幅度要用同一组问题、同一批引擎做前后对比；在取得这样的记录之前，我们不公布提升数字。</dd>
           </dl>
           <div class="case-media">
             <figure class="diagram geo-chart">

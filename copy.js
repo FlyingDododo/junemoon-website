@@ -161,7 +161,7 @@
 
   'work.kicker': ['03 · 案例', '03 · 案例', '03 · Work'],
   'work.title': ['做过的事，和它现在的状态。', '做過的事，和它現在的狀態。', 'What we’ve built, and where it stands.'],
-  'work.lead': ['每个案例写明我们做了什么、怎么验证，以及还没验证的部分。客户名称按约定匿名。', '每個案例寫明我們做了甚麼、怎樣驗證，以及尚未驗證的部分。客戶名稱按約定匿名。', 'Each case says what we did, how it was checked, and what hasn’t been proven yet. Clients are anonymous by agreement.'],
+  'work.lead': ['每个案例写明场景、我们做了什么，以及已经验证的结果。客户名称按约定匿名。', '每個案例寫明場景、我們做了甚麼，以及已經驗證的結果。客戶名稱按約定匿名。', 'Each case covers the situation, what we did, and what has been verified. Clients are anonymous by agreement.'],
   'edu.cad.title': ['交付节奏 · 2026 年 6 月至今', '交付節奏 · 2026 年 6 月至今', 'Delivery rhythm · since June 2026'],
   'edu.cad.w': ['周度运行信号 × 17', '週度運行訊號 × 17', 'Weekly signals × 17'],
   'edu.cad.m': ['月度经营复盘 × 3', '月度經營覆盤 × 3', 'Monthly reviews × 3'],
@@ -176,7 +176,6 @@
   'office.situation': ['出版机构的课题、稿酬和采购申请要经过提交人、社长、财务、采购几道手，此前靠表格和即时通讯流转：资料缺件要来回催，银行账号、身份证这类信息也需要只让该看的人看到。', '出版機構的課題、稿酬和採購申請要經過提交人、社長、財務、採購幾道手，此前靠表格和即時通訊流轉：資料缺件要來回催，銀行帳號、身份證這類資料也需要只讓該看的人看到。', 'A publisher’s project, author-fee and purchase requests pass through submitters, the director, finance and purchasing. They used to move through spreadsheets and messaging apps: missing documents meant chasing, and bank and ID details had to reach only the people who should see them.'],
   'office.did': ['我们做了一个自托管的办公台：课题支付、稿酬支付、办公用品采购各有固定步骤，每一步自动落到对应角色的待办。提交人只看自己的申请，财务只在付款环节看到当前一笔的收款信息；银行账号等敏感字段加密保存，每次解密都留审计记录。AI 可以从上传的申请书和合同里预填字段，拿不准的高亮让人确认；正式环境默认不把资料发给外部模型。', '我們做了一個自行託管的辦公台：課題支付、稿酬支付、辦公用品採購各有固定步驟，每一步自動落到對應角色的待辦。提交人只看自己的申請，財務只在付款環節看到當前一筆的收款資料；銀行帳號等敏感欄位加密保存，每次解密都留審計紀錄。AI 可以從上傳的申請書和合同預填欄位，拿不準的會高亮讓人確認；正式環境預設不把資料傳給外部模型。', 'We built a self-hosted office platform. Project payments, author fees and office purchases each follow fixed steps, and every step lands in the right person’s queue. Submitters see only their own requests; finance sees payment details one request at a time, at the payment stage. Bank accounts and other sensitive fields are encrypted, and every decryption is logged. AI can pre-fill fields from uploaded applications and contracts, highlighting anything it’s unsure of; in production nothing is sent to external models by default.'],
   'office.verified': ['2026 年 9 月底，正式版部署到客户自己的云服务器，使用独立正式库，原演示数据完整保留。上线前的回归测试覆盖批量建号与激活、角色隔离、停用与交接、加密备份与恢复，电脑和手机界面逐页检查。', '2026 年 9 月底，正式版部署到客戶自己的雲端伺服器，使用獨立正式庫，原演示數據完整保留。上線前的回歸測試覆蓋批量建帳號與啟用、角色隔離、停用與交接、加密備份與還原，電腦和手機介面逐頁檢查。', 'In late September 2026 the production version went live on the client’s own cloud server with a separate production database, keeping the demo data intact. Pre-launch regression tests covered bulk account creation and activation, role isolation, deactivation and hand-over, and encrypted backup and restore, with every screen checked on desktop and mobile.'],
-  'office.open': ['小范围真实试运行待完成，全员启用前先跑通每类申请各一笔。它不是总账、审计或报税系统；权限控制和字段加密也不等于端到端保密。', '小範圍真實試運行待完成，全員啟用前先跑通每類申請各一筆。它不是總賬、審計或報稅系統；權限控制和欄位加密也不等於端對端保密。', 'A small real-world trial is still to come: each request type runs once end to end before everyone is switched on. It is not a general ledger, audit or tax system, and access control plus field encryption is not end-to-end secrecy.'],
   'office.note.1': ['固定步骤，每一步落到对应角色的待办', '固定步驟，每一步落到對應角色的待辦', 'Fixed steps; each lands in the right person’s queue'],
   'office.note.2': ['收款信息加密保存，只有审批人能解密', '收款資料加密保存，只有審批人可以解密', 'Payment details encrypted; only the approver can decrypt'],
   'office.note.3': ['每一次流转都留记录', '每一次流轉都留紀錄', 'Every hand-off is logged'],
@@ -202,7 +201,6 @@
   'work.situation': ['场景', '場景', 'Situation'],
   'work.did': ['我们做了什么', '我們做了甚麼', 'What we did'],
   'work.verified': ['已验证', '已驗證', 'Verified'],
-  'work.open': ['还待验证', '尚待驗證', 'Not yet proven'],
   'share': ['复制案例链接', '複製案例連結', 'Copy link'],
   'zoom': ['放大查看', '放大查看', 'View full size'],
   'open.original': ['打开原图 ↗', '開啟原圖 ↗', 'Open original image ↗'],
@@ -220,7 +218,6 @@
   'scan.detail.2': ['核验人勾选确认后，才产生交付预览。', '核驗人勾選確認後，才產生交付預覽。', 'A delivery preview appears only after the reviewer confirms.'],
   'scan.export': ['实际导出的期限清单（八栏 Excel）', '實際匯出的期限清單（八欄 Excel）', 'The exported deadline list (eight-column Excel)'],
   'scan.verified': ['用真实模型处理模拟打印回扫的虚构文书；人工核准后生成归档副本和八栏 Excel，延期更新保留原期限，含糊日期留待人工核对。', '用真實模型處理模擬列印回掃的虛構文書；人手核准後生成歸檔副本和八欄 Excel，延期更新保留原期限，含糊日期留待人手核對。', 'A live model processed fictional documents that were printed and rescanned in simulation. After human approval it produced filed copies and an eight-column Excel list; extensions kept the original date, and an ambiguous date was held for review.'],
-  'scan.open': ['客户真实文件的识别准确率、处理用时，以及与事务所现有表格的对接，在试用中确认。', '客戶真實文件的識別準確率、處理時間，以及與事務所現有表格的接駁，在試用中確認。', 'Accuracy on the firm’s real documents, handling time, and integration with its existing spreadsheets — to be established during the trial.'],
 
   'edu.category': ['教育出版平台 · 接管与持续开发', '教育出版平台 · 接管與持續開發', 'Education publishing · Takeover and development'],
   'edu.status': ['运行中 · 正式技术服务', '運行中 · 正式技術服務', 'Ongoing · Technical service contract'],
@@ -234,7 +231,6 @@
   'edu.flow.note': ['人在这里决定', '由人在這裏決定', 'A person decides here'],
   'edu.fig': ['流程示意，依据功能上线与验收记录绘制', '流程示意，按功能上線與驗收紀錄繪製', 'Schematic, drawn from the release and acceptance records'],
   'edu.verified': ['2026 年 7 月上线，记录覆盖 6 类题型。验收中发现阅读原文遗漏，修复题组结构后用同一份试卷复测，原文与 5 道关联小题完整保留。', '2026 年 7 月上線，紀錄涵蓋 6 類題型。驗收時發現閱讀原文遺漏，修復題組結構後以同一份試卷覆測，原文與 5 道關聯小題完整保留。', 'Released in July 2026; the records cover six question types. Acceptance testing found a missing reading passage; after fixing the grouping we retested the same paper and the passage and its five linked questions came through intact.'],
-  'edu.open': ['更多题型和更大范围使用，另行验证。这里只写我们参与的技术工作，不把平台全部功能或用户规模算作我们的成果。', '更多題型和更大範圍使用，另行驗證。這裏只寫我們參與的技術工作，不把平台全部功能或用戶規模當作我們的成果。', 'More question types and wider use need separate validation. This describes our technical contribution only, not every platform feature or its user base.'],
 
   'geo.category': ['医疗 · AI 搜索可见度（GEO）', '醫療 · AI 搜尋可見度（GEO）', 'Healthcare · AI search visibility (GEO)'],
   'geo.status': ['检测报告已交付 · 2026 年 5 月', '檢測報告已交付 · 2026 年 5 月', 'Audit delivered · May 2026'],
@@ -248,7 +244,6 @@
   'geo.takeaway': ['按名字问，AI 都认识这家医院；按需求问，大约十次里才提到一次。后一类提问者，正是还没被接住的潜在患者。', '按名稱問，AI 都認識這間醫院；按需要問，大約十次才提到一次。後一類提問的人，正是還未被接住的潛在病人。', 'Asked by name, every engine knew the hospital. Asked by need, it came up roughly one time in ten. Those people are the prospective patients no one is reaching yet.'],
   'geo.fig': ['真实检测数据的汇总，客户匿名。这是一次基线，不是优化后的效果。', '真實檢測數據的匯總，客戶匿名。這是一次基線，並非優化後的成效。', 'Summary of real audit data; client anonymous. This is a baseline, not a result of optimisation.'],
   'geo.verified': ['已交付检测报告与逐条明细（问题分类、引擎与模型、原始回答、是否提及、竞品、扣分原因）。', '已交付檢測報告與逐條明細（問題分類、引擎與模型、原始回答、是否提及、競爭對手、扣分原因）。', 'Delivered: the audit report and line-by-line detail — question category, engine and model, raw answer, mention, competitors, scoring issues.'],
-  'geo.open': ['检测不保证排名或引用。提升幅度要用同一组问题、同一批引擎做前后对比；在取得这样的记录之前，我们不公布提升数字。', '檢測不保證排名或引用。提升幅度要以同一組問題、同一批引擎做前後對比；取得這樣的紀錄之前，我們不公佈提升數字。', 'An audit doesn’t guarantee ranking or citation. Improvement has to be measured on the same questions and engines, before and after; until we have that record, we don’t publish an improvement figure.'],
 
   'gate.category': ['医疗运营 · 可控 AI 接入', '醫療營運 · 可控 AI 接入', 'Healthcare operations · Controlled AI'],
   'gate.status': ['演示与小组验证', '演示與小組驗證', 'Demo and small-group validation'],
@@ -256,10 +251,9 @@
   'gate.situation': ['医院原有的 CRM、客服和渠道系统各自运作。线索要整理，咨询要及时回复，但费用和诊疗承诺这类话，不能让 AI 随口说。', '醫院原有的 CRM、客服和渠道系統各自運作。查詢要整理，諮詢要及時回覆，但費用和診療承諾這類說話，不能讓 AI 隨口說。', 'The hospital’s CRM, customer service and channel systems each ran on their own. Leads needed sorting and enquiries needed fast replies — but AI must not improvise on fees or clinical promises.'],
   'gate.did': ['在原系统之上补一层工作台：线索按规则分池，规则先试跑出报告、确认无误再执行，对生产 CRM 只读。AI 坐席先在后台给出带来源的建议回复，由客服决定采用、修改还是转人工；触发护栏规则的问题一律转人工。', '在原系統之上加一層工作台：查詢按規則分池，規則先試跑出報告、確認無誤才執行，對生產 CRM 只讀。AI 坐席先在後台給出附來源的建議回覆，由客服決定採用、修改還是轉人工；觸發護欄規則的問題一律轉人工。', 'We added a workbench on top of the existing systems. Leads are sorted by rule; each rule first runs as a dry run with a report and only takes effect once checked, and the production CRM stays read-only. The AI agent drafts replies with sources in the background, and staff choose to use, edit or hand off; anything that trips a guardrail goes straight to a person.'],
   'gate.fig': ['按实际功能重绘的示意界面 · 演示数据，不是真实会话', '按實際功能重繪的示意介面 · 演示數據，並非真實對話', 'Redrawn from the working feature · demo data, not a real conversation'],
-  'gate.open': ['目前处于演示与小组验证阶段，没有全面上线；写入生产系统尚未启用。', '目前處於演示與小組驗證階段，未全面上線；寫入生產系統尚未啟用。', 'Currently in demo and small-group validation, not fully live. Writing to production systems is not yet enabled.'],
 
   'office.category': ['出版机构 · 办公与财务流转', '出版機構 · 辦公與財務流轉', 'Publisher · office and finance workflow'],
-  'office.status': ['正式版已部署 · 2026 年 9 月', '正式版已部署 · 2026 年 9 月', 'Production version live · September 2026'],
+  'office.status': ['正式版试用中 · 2026 年 10 月', '正式版試用中 · 2026 年 10 月', 'Production version in trial · October 2026'],
   'office.title': ['一份申请从提交到付款，每一步只让该看的人看到。', '一份申請由提交到付款，每一步只讓該看的人看到。', 'From request to payment, each step seen only by the people who should see it.'],
 
   'svc.kicker': ['04 · 服务', '04 · 服務', '04 · Services'],
