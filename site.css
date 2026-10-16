@@ -182,6 +182,54 @@ p { color: var(--ink-2); text-wrap: pretty; }
   @keyframes tag-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 }
 
+/* Case B — delivery rhythm */
+.cad-track { position: relative; height: 46px; margin: 20px 0 0; border-bottom: 1.5px solid var(--ink); }
+.cad-w, .cad-m { position: absolute; left: var(--x); bottom: 0; border-radius: 2px 2px 0 0; transform-origin: bottom; }
+.cad-w { width: 4px; height: 22px; margin-left: -2px; background: var(--blue-600); }
+.cad-m { width: 10px; height: 40px; margin-left: -5px; background: var(--ink); }
+.cad-axis { position: relative; height: 22px; font-size: 11px; color: var(--muted); }
+.cad-axis span { position: absolute; left: var(--x); top: 6px; padding-left: 4px; border-left: 1px solid var(--line-2); line-height: 1; }
+.cad-legend { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 8px; font-size: 12px; color: var(--ink-2); }
+.cad-legend li { display: flex; align-items: center; gap: 8px; }
+.cad-key { display: inline-block; border-radius: 2px; }
+.cad-key.w { width: 4px; height: 12px; background: var(--blue-600); }
+.cad-key.m { width: 9px; height: 14px; background: var(--ink); }
+.cad-docs { margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--line-2); }
+.cad-docs > p { font-size: 11.5px; color: var(--muted); margin-bottom: 10px; }
+.cad-docs ul { display: flex; flex-wrap: wrap; gap: 8px; }
+.cad-docs li { position: relative; padding: 7px 11px 7px 26px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); font-size: 13px; }
+.cad-docs li::before { content: ""; position: absolute; left: 10px; top: 50%; width: 9px; height: 11px; margin-top: -6px; border: 1.5px solid var(--blue-400); border-radius: 1.5px; }
+@media (prefers-reduced-motion: no-preference) {
+  .cad-w, .cad-m { transition: transform .5s var(--ease); transition-delay: calc(var(--k) * 45ms); }
+  .cad-m { transition-delay: calc(.4s + var(--k) * 120ms); }
+  .js .cadence.pending .cad-w, .js .cadence.pending .cad-m { transform: scaleY(0); }
+}
+
+/* Case C — two screens side by side */
+.case-media.shot-duo { grid-template-columns: minmax(0, 2.55fr) minmax(0, 1fr); align-items: start; }
+.shot-duo .shot.phone { max-width: none; }
+
+/* Case E — every question type */
+.geo-group { padding-top: 6px; }
+.geo-group + .geo-group { margin-top: 10px; }
+.geo-group h4 { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0 8px; border-bottom: 1px solid var(--line); font-size: 14.5px; font-weight: 600; }
+.geo-group h4 b { font-size: 14px; font-weight: 600; color: var(--blue-600); }
+.geo-group.is-gap h4 b { color: var(--amber-ink); }
+.geo-list li { display: grid; grid-template-columns: minmax(0, 9em) minmax(0, 1fr) 4.4em; align-items: center; gap: 12px; padding: 5px 0; font-size: 13.5px; color: var(--ink-2); }
+.geo-list .bar { position: relative; height: 10px; border-radius: 2px; background: repeating-linear-gradient(90deg, var(--bg) 0 calc(10% - 1px), var(--line) calc(10% - 1px) 10%); overflow: hidden; }
+.geo-list .bar b { position: absolute; inset: 0 auto 0 0; width: calc(var(--p) * 100%); border-radius: 2px; background: var(--blue-600); transform-origin: left; }
+.geo-group.is-gap .bar b { background: var(--amber); }
+.geo-list .n { font: 12px/1 var(--mono); text-align: right; color: var(--ink-2); }
+.geo-list .zero span:first-child, .geo-list .zero .n { color: var(--amber-ink); }
+.geo-list .zero .n { font-weight: 600; }
+.geo-legend { margin-top: 10px; font-size: 11px; color: var(--muted); }
+.geo-engines { margin-top: 14px; font-size: 14px; line-height: 1.7; color: var(--ink-2); }
+.js .geo-chart.pending .geo-list .bar b { transform: scaleX(0); }
+.js .geo-chart .geo-list .bar b { transition: transform 1s var(--ease); }
+.js .geo-chart .geo-group.is-gap .bar b { transition-delay: .3s; }
+@media (max-width: 760px) { .case-media.shot-duo { grid-template-columns: 1fr; } .shot-duo .shot.phone { max-width: 300px; } }
+@media (max-width: 560px) { .geo-list li { grid-template-columns: minmax(0, 7.5em) minmax(0, 1fr) 4em; gap: 8px; font-size: 13px; } }
+
 /* About — the kinds of clients, unnamed */
 .clients a { display: flex; flex-direction: column; gap: 8px; height: 100%; color: inherit; }
 .clients h3 { transition: color .2s; }

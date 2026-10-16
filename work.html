@@ -61,7 +61,7 @@
         <a href="#case-scan"><b>A</b><span data-i18n="scan.category">专业服务 · 文件处理</span></a>
         <a href="#case-platform"><b>B</b><span data-i18n="edu.category">教育出版平台 · 接管与持续开发</span></a>
         <a href="#case-gate"><b>C</b><span data-i18n="gate.category">医疗运营 · 可控 AI 接入</span></a>
-        <a href="#case-office"><b>D</b><span data-i18n="office.category">办公与财务流转</span></a>
+        <a href="#case-office"><b>D</b><span data-i18n="office.category">出版机构 · 办公与财务流转</span></a>
         <a href="#case-geo"><b>E</b><span data-i18n="geo.category">医疗 · AI 搜索可见度（GEO）</span></a>
       </nav>
 
@@ -136,6 +136,20 @@
               </div>
               <figcaption class="mono" data-i18n="edu.fig">流程示意，依据功能上线与验收记录绘制</figcaption>
             </figure>
+            <figure class="diagram cadence">
+              <p class="mono fig-label" data-i18n="edu.cad.title">交付节奏 · 2026 年 6 月至今</p>
+              <div class="cad-track" aria-hidden="true"><i class="cad-w" style="--x:7.24%;--k:0"></i><i class="cad-w" style="--x:17.11%;--k:1"></i><i class="cad-w" style="--x:21.05%;--k:2"></i><i class="cad-w" style="--x:25.66%;--k:3"></i><i class="cad-w" style="--x:30.26%;--k:4"></i><i class="cad-w" style="--x:35.53%;--k:5"></i><i class="cad-w" style="--x:40.13%;--k:6"></i><i class="cad-w" style="--x:45.39%;--k:7"></i><i class="cad-w" style="--x:48.68%;--k:8"></i><i class="cad-w" style="--x:54.61%;--k:9"></i><i class="cad-w" style="--x:59.21%;--k:10"></i><i class="cad-w" style="--x:63.82%;--k:11"></i><i class="cad-w" style="--x:68.42%;--k:12"></i><i class="cad-w" style="--x:73.03%;--k:13"></i><i class="cad-w" style="--x:77.63%;--k:14"></i><i class="cad-w" style="--x:82.24%;--k:15"></i><i class="cad-w" style="--x:86.84%;--k:16"></i><i class="cad-m" style="--x:39.47%;--k:0"></i><i class="cad-m" style="--x:59.87%;--k:1"></i><i class="cad-m" style="--x:79.61%;--k:2"></i></div>
+              <div class="cad-axis mono" aria-hidden="true"><span style="--x:0.00%">06</span><span style="--x:19.74%">07</span><span style="--x:40.13%">08</span><span style="--x:60.53%">09</span><span style="--x:80.26%">10</span></div>
+              <ul class="cad-legend mono">
+                <li><i class="cad-key w"></i><span data-i18n="edu.cad.w">周度运行信号 × 17</span></li>
+                <li><i class="cad-key m"></i><span data-i18n="edu.cad.m">月度经营复盘 × 3</span></li>
+              </ul>
+              <div class="cad-docs">
+                <p class="mono" data-i18n="edu.cad.docs">接管期交付的文件</p>
+                <ul><li data-i18n="edu.doc.1">运维就绪现状报告</li><li data-i18n="edu.doc.2">历史工单盘点</li><li data-i18n="edu.doc.3">接管安全说明</li><li data-i18n="edu.doc.4">独立运维与解绑路线图</li><li data-i18n="edu.doc.5">迁移收尾报告</li></ul>
+              </div>
+              <figcaption class="mono" data-i18n="edu.cad.fig">按实际交付记录绘制，截至 2026-10-11。报告内容涉及客户，不公开。</figcaption>
+            </figure>
           </div>
         </div>
       </article>
@@ -157,7 +171,11 @@
             <dt class="mono" data-i18n="work.did">我们做了什么</dt><dd data-i18n="gate.did">在原系统之上补一层工作台：线索按规则分池，规则先试跑出报告、确认无误再执行，对生产 CRM 只读。AI 坐席先在后台给出带来源的建议回复，由客服决定采用、修改还是转人工；触发护栏规则的问题一律转人工。</dd>
             <dt class="mono todo" data-i18n="work.open">还待验证</dt><dd data-i18n="gate.open">目前处于演示与小组验证阶段，没有全面上线；写入生产系统尚未启用。</dd>
           </dl>
-          <div class="case-media">
+          <div class="case-media shot-duo">
+            <figure class="shot">
+              <button type="button" class="zoom" data-image="assets/crm-pool.webp" data-caption="gate.fig2"><img src="assets/crm-pool.webp" width="1400" height="1006" loading="lazy" alt="按实际功能重绘的示意界面 · 演示数据：线索按规则分池，规则先空跑、确认无误分才执行" data-alt="gate.fig2"></button>
+              <figcaption class="mono" data-i18n="gate.fig2">按实际功能重绘的示意界面 · 演示数据：线索按规则分池，规则先空跑、确认无误分才执行</figcaption>
+            </figure>
             <figure class="shot phone">
               <button type="button" class="zoom" data-image="assets/agent-guardrail.webp" data-caption="gate.fig"><img src="assets/agent-guardrail.webp" width="453" height="836" loading="lazy" alt="AI 坐席示意界面：建议回复附来源，涉及费用的问题按护栏规则强制转人工" data-alt="gate.fig"></button>
               <figcaption class="mono" data-i18n="gate.fig">按实际功能重绘的示意界面 · 演示数据，不是真实会话</figcaption>
@@ -167,17 +185,42 @@
       </article>
 
       <!-- E: office workflow -->
-      <article class="case case-compact" id="case-office"><span id="office-demo" class="anchor-alias"></span>
+      <article class="case" id="case-office"><span id="office-demo" class="anchor-alias"></span>
         <header class="case-head">
           <span class="case-id mono">D</span>
-          <span class="case-cat mono" data-i18n="office.category">办公与财务流转</span>
+          <span class="case-cat mono" data-i18n="office.category">出版机构 · 办公与财务流转</span>
           <a class="cap-tag mono" href="./#cap-2" data-i18n="cap.tag.2">能力 02 · AI 工作流</a>
-          <span class="status" data-phase="half" data-i18n="office.status">演示站已发布 · 2026 年 9 月</span>
+          <span class="status" data-phase="full" data-i18n="office.status">正式版已部署 · 2026 年 9 月</span>
           <button type="button" class="share mono" data-share="case-office" data-i18n="share">复制案例链接</button>
         </header>
-        <div class="compact-body">
-          <h3 class="case-title" data-i18n="office.title">一份申请，从补齐资料到审批办理。</h3>
-          <p data-i18n="office.desc">为教育出版机构开发：申请与附件、缺件补正、角色待办、审批退回、费用汇总和操作记录，串成一段可追踪的流程。正式账号与业务试用另行推进。不是总账、审计或报税系统。</p>
+        <h3 class="case-title" data-i18n="office.title">一份申请从提交到付款，每一步只让该看的人看到。</h3>
+        <div class="case-body">
+          <dl class="case-text">
+            <dt class="mono" data-i18n="work.situation">场景</dt><dd data-i18n="office.situation">出版机构的课题、稿酬和采购申请要经过提交人、社长、财务、采购几道手，此前靠表格和即时通讯流转：资料缺件要来回催，银行账号、身份证这类信息也需要只让该看的人看到。</dd>
+            <dt class="mono" data-i18n="work.did">我们做了什么</dt><dd data-i18n="office.did">我们做了一个自托管的办公台：课题支付、稿酬支付、办公用品采购各有固定步骤，每一步自动落到对应角色的待办。提交人只看自己的申请，财务只在付款环节看到当前一笔的收款信息；银行账号等敏感字段加密保存，每次解密都留审计记录。AI 可以从上传的申请书和合同里预填字段，拿不准的高亮让人确认；正式环境默认不把资料发给外部模型。</dd>
+            <dt class="mono ok" data-i18n="work.verified">已验证</dt><dd data-i18n="office.verified">2026 年 9 月底，正式版部署到客户自己的云服务器，使用独立正式库，原演示数据完整保留。上线前的回归测试覆盖批量建号与激活、角色隔离、停用与交接、加密备份与恢复，电脑和手机界面逐页检查。</dd>
+            <dt class="mono todo" data-i18n="work.open">还待验证</dt><dd data-i18n="office.open">小范围真实试运行待完成，全员启用前先跑通每类申请各一笔。它不是总账、审计或报税系统；权限控制和字段加密也不等于端到端保密。</dd>
+          </dl>
+          <div class="case-media">
+            <figure class="shot annotated">
+              <button type="button" class="zoom" data-image="assets/office-detail.webp" data-caption="office.fig">
+                <img src="assets/office-detail.webp" width="1162" height="960" loading="lazy" alt="真实界面截图 · 演示数据 · 客户名称与学校名已遮去" data-alt="office.fig">
+                <span class="pin" style="--x:26%;--y:17%" aria-hidden="true">1</span>
+                <span class="pin pin-human" style="--x:57%;--y:69%" aria-hidden="true">2</span>
+                <span class="pin pin-ai" style="--x:94%;--y:32%" aria-hidden="true">3</span>
+              </button>
+              <ol class="pins-legend">
+                <li><span class="pin-dot">1</span><span data-i18n="office.note.1">固定步骤，每一步落到对应角色的待办</span></li>
+                <li><span class="pin-dot pin-human">2</span><span data-i18n="office.note.2">收款信息加密保存，只有审批人能解密</span></li>
+                <li><span class="pin-dot pin-ai">3</span><span data-i18n="office.note.3">每一次流转都留记录</span></li>
+              </ol>
+              <figcaption class="mono" data-i18n="office.fig">真实界面截图 · 演示数据 · 客户名称与学校名已遮去</figcaption>
+            </figure>
+            <figure class="shot">
+              <button type="button" class="zoom" data-image="assets/office-ledger.webp" data-caption="office.fig2"><img src="assets/office-ledger.webp" width="1164" height="492" loading="lazy" alt="费用总表：按年度额度看已用、在途和待批 · 演示金额" data-alt="office.fig2"></button>
+              <figcaption class="mono" data-i18n="office.fig2">费用总表：按年度额度看已用、在途和待批 · 演示金额</figcaption>
+            </figure>
+          </div>
         </div>
       </article>
 
@@ -200,16 +243,31 @@
           <div class="case-media">
             <figure class="diagram geo-chart">
               <p class="mono fig-label" data-i18n="geo.fig.title">2026-05-21 基线检测 · 211 条回答 · 4 个引擎</p>
-              <div class="geo-row" style="--p:1">
-                <p class="geo-q" data-i18n="geo.bar.1">直接问医院名：品牌、预约、口碑、到院</p>
-                <div class="geo-bar"><span></span></div>
-                <p class="geo-n"><b class="mono">48 / 48</b> <span data-i18n="geo.bar.unit">条回答提到这家医院</span></p>
+              <div class="geo-group">
+                <h4><span data-i18n="geo.g.1">按名字问</span><b class="mono">48 / 48</b></h4>
+                <ul class="geo-list">
+                  <li class="" style="--p:1.000"><span data-i18n="geo.c.brand">品牌搜索</span><i class="bar"><b></b></i><span class="n">20 / 20</span></li>
+                  <li class="" style="--p:1.000"><span data-i18n="geo.c.booking">预约挂号</span><i class="bar"><b></b></i><span class="n">12 / 12</span></li>
+                  <li class="" style="--p:1.000"><span data-i18n="geo.c.reviews">口碑评价</span><i class="bar"><b></b></i><span class="n">8 / 8</span></li>
+                  <li class="" style="--p:1.000"><span data-i18n="geo.c.route">到院导航</span><i class="bar"><b></b></i><span class="n">8 / 8</span></li>
+                </ul>
               </div>
-              <div class="geo-row is-gap" style="--p:.104">
-                <p class="geo-q" data-i18n="geo.bar.2">按需求提问：症状、费用、方案、术后等</p>
-                <div class="geo-bar"><span></span></div>
-                <p class="geo-n"><b class="mono">17 / 163</b> <span data-i18n="geo.bar.unit">条回答提到这家医院</span></p>
+              <div class="geo-group is-gap">
+                <h4><span data-i18n="geo.g.2">按需求问</span><b class="mono">17 / 163</b></h4>
+                <ul class="geo-list">
+                  <li class="" style="--p:0.500"><span data-i18n="geo.c.tests">检查项目</span><i class="bar"><b></b></i><span class="n">6 / 12</span></li>
+                  <li class="" style="--p:0.375"><span data-i18n="geo.c.compare">同类比较</span><i class="bar"><b></b></i><span class="n">6 / 16</span></li>
+                  <li class="" style="--p:0.167"><span data-i18n="geo.c.cost">费用咨询</span><i class="bar"><b></b></i><span class="n">2 / 12</span></li>
+                  <li class="" style="--p:0.107"><span data-i18n="geo.c.local">本地推荐</span><i class="bar"><b></b></i><span class="n">3 / 28</span></li>
+                  <li class="zero" style="--p:0.000"><span data-i18n="geo.c.symptom">症状咨询</span><i class="bar"><b></b></i><span class="n">0 / 32</span></li>
+                  <li class="zero" style="--p:0.000"><span data-i18n="geo.c.after">术后护理</span><i class="bar"><b></b></i><span class="n">0 / 16</span></li>
+                  <li class="zero" style="--p:0.000"><span data-i18n="geo.c.tcm">中医调理</span><i class="bar"><b></b></i><span class="n">0 / 16</span></li>
+                  <li class="zero" style="--p:0.000"><span data-i18n="geo.c.privacy">隐私咨询</span><i class="bar"><b></b></i><span class="n">0 / 16</span></li>
+                  <li class="zero" style="--p:0.000"><span data-i18n="geo.c.options">治疗方案比较</span><i class="bar"><b></b></i><span class="n">0 / 15</span></li>
+                </ul>
               </div>
+              <p class="geo-legend mono" data-i18n="geo.list.note">每行：提到这家医院的回答数 / 该类回答总数</p>
+              <p class="geo-engines" data-i18n="geo.engines">四个引擎的整体提及率在 26%–35% 之间，差别不大；真正拉开差距的是问题怎么问。</p>
               <p class="geo-takeaway" data-i18n="geo.takeaway">按名字问，AI 都认识这家医院；按需求问，大约十次里才提到一次。后一类提问者，正是还没被接住的潜在患者。</p>
               <figcaption class="mono" data-i18n="geo.fig">真实检测数据的汇总，客户匿名。这是一次基线，不是优化后的效果。</figcaption>
             </figure>
