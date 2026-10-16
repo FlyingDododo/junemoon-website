@@ -81,6 +81,8 @@
     onFirstView(reveals, el => el.classList.remove('pending'));
     const annotated = $$('.annotated'); annotated.forEach(el => el.classList.add('pending'));
     onFirstView(annotated, el => el.classList.remove('pending'), { rootMargin: '0px 0px -25% 0px' });
+    const lanes = $$('.lanes'); lanes.forEach(el => el.classList.add('pending'));
+    onFirstView(lanes, el => el.classList.remove('pending'), { rootMargin: '0px 0px -20% 0px' });
     const insets = $$('.inset-shot'); insets.forEach(el => el.classList.add('pending'));
     onFirstView(insets, el => el.classList.remove('pending'), { rootMargin: '0px 0px -20% 0px' });
     const geo = $$('.geo-chart'); geo.forEach(el => el.classList.add('pending'));
@@ -151,7 +153,7 @@
   /* One-page brief, generated in the current language */
   function downloadBrief() {
     const tr = k => esc(plain(t(k)));
-    const cases = [['scan', 'scan.category', 'scan.title', 'scan.status', 'scan.did'], ['edu', 'edu.category', 'edu.title', 'edu.status', 'edu.did'], ['geo', 'geo.category', 'geo.title', 'geo.status', 'geo.did'], ['gate', 'gate.category', 'gate.title', 'gate.status', 'gate.did'], ['office', 'office.category', 'office.title', 'office.status', 'office.desc']];
+    const cases = [['scan', 'scan.category', 'scan.title', 'scan.status', 'scan.did'], ['edu', 'edu.category', 'edu.title', 'edu.status', 'edu.did'], ['gate', 'gate.category', 'gate.title', 'gate.status', 'gate.did'], ['office', 'office.category', 'office.title', 'office.status', 'office.desc'], ['geo', 'geo.category', 'geo.title', 'geo.status', 'geo.did']];
     const steps = [1, 2, 3, 4].map(i => `<li><b>${tr('ap.' + i + '.t')}</b> — ${tr('ap.' + i + '.g')}</li>`).join('');
     const html = `<!doctype html><html lang="${locales[lang]}"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${tr('brief.title')}</title>
 <style>body{font:14px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;color:#0d1b2e;max-width:780px;margin:36px auto;padding:0 28px}h1{font-size:26px;line-height:1.3;margin:0 0 8px}h2{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#2e66c4;margin:26px 0 10px;font-family:ui-monospace,Consolas,monospace}h3{font-size:15px;margin:12px 0 2px}p,li{margin:4px 0;color:#2f3f54}small{color:#5f6e82;font-family:ui-monospace,Consolas,monospace;font-size:11.5px}header{border-bottom:1.5px solid #0d1b2e;padding-bottom:14px}ol{padding-left:18px}footer{border-top:1px solid #d7dee8;margin-top:24px;padding-top:12px}a{color:#2e66c4}@media print{body{margin:0;font-size:10.5px;line-height:1.5}h1{font-size:20px}h2{margin-top:14px}a{color:inherit}}</style>

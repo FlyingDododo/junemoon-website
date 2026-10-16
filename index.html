@@ -61,7 +61,7 @@
       <div class="cover-copy">
         <p class="cover-name"><img src="assets/logo.png" width="26" height="29" alt=""><span data-i18n="home.eyebrow">佳裕云智 · Junemoon</span></p>
         <h1 data-i18n-html="hero.title">以前做不起的事，<br><em>现在值得做了。</em></h1>
-        <p class="cover-lead" data-i18n="home.lead">我们做业务咨询，也亲手做 AI 落地：找出那些一直值得做、却因为太费人或太花钱而搁置的事，把它做成每天能用的系统。</p>
+        <p class="cover-lead" data-i18n="home.lead">我们做业务咨询，也亲手做 AI 落地：走进你的业务流程，把一直值得做、却太费人手的那部分工作交给 AI 组织起来，做成每天能用的系统。</p>
         <div class="actions">
           <a class="button primary" href="#capabilities"><span data-i18n="home.cta">看三项能力</span><span class="arrow" aria-hidden="true">↓</span></a>
           <a class="button ghost" href="#contact" data-i18n="hero.cta2">聊一件具体的事</a>
@@ -95,48 +95,55 @@
     <div class="wrap">
       <header class="caps-head">
         <p class="kicker mono" data-i18n="cap.kicker">三项能力</p>
-        <h2 data-i18n="cap.title">我们把三件事做深。</h2>
+        <div>
+          <h2 data-i18n="cap.title">走进流程，用 AI 把一段工作重新组织起来。</h2>
+          <p class="lead" data-i18n="cap.lead">先看清，再搭建，然后长期运行。挑一段最费人的工作开始，做好了再做下一段。</p>
+        </div>
       </header>
 
       <article class="cap" id="cap-1">
         <div class="cap-copy">
-          <p class="cap-num"><span class="mono">01</span><span class="cap-name" data-i18n="cap.1.name">AI 业务流程</span></p>
-          <h3 data-i18n="cap.1.title">资料进来，事情办完。</h3>
-          <p class="cap-desc" data-i18n="cap.1.desc">扫描件、试卷、咨询线索——这些以前靠人一份份看、一条条记的资料工作，我们做成 AI 先整理、人来核准的系统。原件留底，不确定的交给人。</p>
-          <p class="cap-proof mono" data-i18n="cap.1.proof">会计档案工作台 · 题库 AI 录入 · 医疗线索分池</p>
-          <a class="cap-more" href="work.html#case-scan" data-i18n="cap.more">看完整案例 →</a>
+          <p class="cap-num"><span class="mono">01</span><span class="cap-name" data-i18n="cap.1.name">流程诊断</span></p>
+          <h3 data-i18n="cap.1.title">先坐进你的流程里。</h3>
+          <p class="cap-desc" data-i18n="cap.1.desc">跟一线的人把真实工作走一遍：资料从哪里来、在哪里卡住、哪一步要人拍板。最后交给你一张图：哪几段交给 AI，哪几步必须留给人，做到什么程度才算成功。</p>
+          <p class="cap-proof mono" data-i18n="cap.1.proof">交付：流程图 · 改造清单 · 成功标准</p>
+          <a class="cap-more" href="approach.html#approach" data-i18n="cap.1.more">看合作四步 →</a>
         </div>
-        <figure class="cap-visual shot inset-shot">
-          <div class="inset-stage">
-            <a class="zoom inset-back" href="work.html#case-scan" tabindex="-1" aria-hidden="true"><img src="assets/acct-review.webp" width="1250" height="678" loading="lazy" alt=""></a>
-            <a class="zoom inset-card" href="work.html#case-scan"><img src="assets/acct-ambiguous.webp" width="346" height="415" loading="lazy" alt="日期栏位留空：原文 05/06/2027 的日月顺序无法确认，模型推测不能作为正式到期日" data-alt="cap.1.inset.alt"></a>
-            <p class="inset-note"><span class="mono">05/06/2027</span><span data-i18n="cap.1.inset">是 5 月 6 日还是 6 月 5 日？AI 不猜，留空交给人。</span></p>
+        <figure class="cap-visual diagram lanes">
+          <p class="mono fig-label" data-i18n="cap.lane.fig">示意 · 以会计事务所的收件流程为例</p>
+          <div class="lane-board">
+            <span class="lane-name lane-name-human mono" data-i18n="cap.lane.human">人</span>
+            <span class="lane-name lane-name-ai mono" data-i18n="cap.lane.ai">AI</span>
+            <svg class="lane-path lane-path-h" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polyline points="8.33,25 25.00,75 41.67,75 58.33,25 75.00,25 91.67,75"/></svg>
+            <svg class="lane-path lane-path-v" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polyline points="25,8.33 75,25.00 75,41.67 25,58.33 25,75.00 75,91.67"/></svg>
+            <ol class="lane-steps">
+              <li class="lane-human" style="--i:1"><span class="mono">01</span><strong data-i18n="cap.lane.1">收件、扫描</strong></li>
+              <li class="lane-ai" style="--i:2"><span class="mono">02</span><strong data-i18n="cap.lane.2">认出公司和文书类型</strong></li>
+              <li class="lane-ai" style="--i:3"><span class="mono">03</span><strong data-i18n="cap.lane.3">摘出期限、拟好档名</strong></li>
+              <li class="lane-human is-decide" style="--i:4"><span class="mono">04</span><strong data-i18n="cap.lane.4">期限含糊，由人判断</strong></li>
+              <li class="lane-human is-decide" style="--i:5"><span class="mono">05</span><strong data-i18n="cap.lane.5">核准、归档</strong></li>
+              <li class="lane-ai" style="--i:6"><span class="mono">06</span><strong data-i18n="cap.lane.6">导出期限清单</strong></li>
+            </ol>
           </div>
-          <figcaption class="mono" data-i18n="scan.fig">真实界面截图 · 虚构公司与文书 · 繁体中文界面</figcaption>
+          <figcaption class="mono" data-i18n="cap.lane.cap">示意图，不是数据。按这张图做出来的工作台，见下方能力 02。</figcaption>
         </figure>
       </article>
 
       <article class="cap cap-flip" id="cap-2">
         <div class="cap-copy">
-          <p class="cap-num"><span class="mono">02</span><span class="cap-name" data-i18n="cap.2.name">AI 搜索可见度</span></p>
-          <h3 data-i18n="cap.2.title">让客户在 AI 的回答里找到你。</h3>
-          <p class="cap-desc" data-i18n="cap.2.desc">客户开始先问 DeepSeek、豆包、Kimi 再做决定。我们检测你在各引擎的回答里出不出现、说得对不对，整理纠错内容，再按同一口径复测。</p>
-          <p class="cap-proof mono" data-i18n="cap.2.proof">一家专科医院的基线检测（2026-05，匿名）</p>
-          <a class="cap-more" href="work.html#case-geo" data-i18n="cap.more">看完整案例 →</a>
+          <p class="cap-num"><span class="mono">02</span><span class="cap-name" data-i18n="cap.2.name">AI 工作流</span></p>
+          <h3 data-i18n="cap.2.title">资料进来，事情办完。</h3>
+          <p class="cap-desc" data-i18n="cap.2.desc">扫描件、试卷、咨询线索——这些以前靠人一份份看、一条条记的资料工作，我们做成 AI 先整理、人来核准的系统。原件留底，不确定的交给人。</p>
+          <p class="cap-proof mono" data-i18n="cap.2.proof">会计档案工作台 · 题库 AI 录入 · 医疗线索分池</p>
+          <a class="cap-more" href="work.html#case-scan" data-i18n="cap.more">看完整案例 →</a>
         </div>
-        <figure class="cap-visual diagram geo-chart">
-          <p class="mono fig-label" data-i18n="geo.fig.title">2026-05-21 基线检测 · 211 条回答 · 4 个引擎</p>
-          <div class="geo-row" style="--p:1">
-            <p class="geo-q" data-i18n="geo.bar.1">直接问医院名：品牌、预约、口碑、到院</p>
-            <div class="geo-bar"><span></span></div>
-            <p class="geo-n"><b class="mono">48 / 48</b> <span data-i18n="geo.bar.unit">条回答提到这家医院</span></p>
+        <figure class="cap-visual shot inset-shot">
+          <div class="inset-stage">
+            <a class="zoom inset-back" href="work.html#case-scan" tabindex="-1" aria-hidden="true"><img src="assets/acct-review.webp" width="1250" height="678" loading="lazy" alt=""></a>
+            <a class="zoom inset-card" href="work.html#case-scan"><img src="assets/acct-ambiguous.webp" width="346" height="415" loading="lazy" alt="日期栏位留空：原文 05/06/2027 的日月顺序无法确认，模型推测不能作为正式到期日" data-alt="cap.2.inset.alt"></a>
+            <p class="inset-note"><span class="mono">05/06/2027</span><span data-i18n="cap.2.inset">是 5 月 6 日还是 6 月 5 日？AI 不猜，留空交给人。</span></p>
           </div>
-          <div class="geo-row is-gap" style="--p:.104">
-            <p class="geo-q" data-i18n="geo.bar.2">按需求提问：症状、费用、方案、术后等</p>
-            <div class="geo-bar"><span></span></div>
-            <p class="geo-n"><b class="mono">17 / 163</b> <span data-i18n="geo.bar.unit">条回答提到这家医院</span></p>
-          </div>
-          <figcaption class="mono" data-i18n="geo.fig">真实检测数据的汇总，客户匿名。这是一次基线，不是优化后的效果。</figcaption>
+          <figcaption class="mono" data-i18n="scan.fig">真实界面截图 · 虚构公司与文书 · 繁体中文界面</figcaption>
         </figure>
       </article>
 
@@ -161,10 +168,10 @@
 
       <aside class="cap-start">
         <div>
-          <h3 data-i18n="cap.start.t">三件事，都从同一个起点开始。</h3>
-          <p data-i18n="cap.start.d">先花一两周走进你的业务，看清哪件事最值得做、风险在哪、资料够不够，再决定做什么。</p>
+          <h3 data-i18n="cap.start.t">从一段流程开始。</h3>
+          <p data-i18n="cap.start.d">不必先定全公司的 AI 战略。挑一段最费人、最常出错的工作，先把它做好，再决定下一步。</p>
         </div>
-        <a class="button ghost" href="approach.html#approach" data-i18n="cap.start.link">我们怎么合作 →</a>
+        <a class="button ghost" href="#contact" data-i18n="cap.start.link">谈谈你的流程 →</a>
       </aside>
     </div>
   </section>

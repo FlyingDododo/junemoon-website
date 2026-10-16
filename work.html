@@ -60,9 +60,9 @@
       <nav class="case-index mono" aria-label="Cases">
         <a href="#case-scan"><b>A</b><span data-i18n="scan.category">专业服务 · 文件处理</span></a>
         <a href="#case-platform"><b>B</b><span data-i18n="edu.category">教育出版平台 · 接管与持续开发</span></a>
-        <a href="#case-geo"><b>C</b><span data-i18n="geo.category">医疗 · AI 搜索可见度（GEO）</span></a>
-        <a href="#case-gate"><b>D</b><span data-i18n="gate.category">医疗运营 · 可控 AI 接入</span></a>
-        <a href="#case-office"><b>E</b><span data-i18n="office.category">办公与财务流转</span></a>
+        <a href="#case-gate"><b>C</b><span data-i18n="gate.category">医疗运营 · 可控 AI 接入</span></a>
+        <a href="#case-office"><b>D</b><span data-i18n="office.category">办公与财务流转</span></a>
+        <a href="#case-geo"><b>E</b><span data-i18n="geo.category">医疗 · AI 搜索可见度（GEO）</span></a>
       </nav>
 
       <!-- A: accounting document workbench -->
@@ -70,7 +70,7 @@
         <header class="case-head">
           <span class="case-id mono">A</span>
           <span class="case-cat mono" data-i18n="scan.category">专业服务 · 文件处理</span>
-          <a class="cap-tag mono" href="./#cap-1" data-i18n="cap.tag.1">能力 01 · AI 业务流程</a>
+          <a class="cap-tag mono" href="./#cap-2" data-i18n="cap.tag.2">能力 02 · AI 工作流</a>
           <span class="status" data-phase="full" data-i18n="scan.status">试用版已交付 · 2026 年 10 月</span>
           <button type="button" class="share mono" data-share="case-scan" data-i18n="share">复制案例链接</button>
         </header>
@@ -140,12 +140,52 @@
         </div>
       </article>
 
+
+      <!-- D: controlled AI in healthcare operations -->
+      <article class="case" id="case-gate">
+        <header class="case-head">
+          <span class="case-id mono">C</span>
+          <span class="case-cat mono" data-i18n="gate.category">医疗运营 · 可控 AI 接入</span>
+          <a class="cap-tag mono" href="./#cap-2" data-i18n="cap.tag.2">能力 02 · AI 工作流</a>
+          <span class="status" data-phase="half" data-i18n="gate.status">演示与小组验证</span>
+          <button type="button" class="share mono" data-share="case-gate" data-i18n="share">复制案例链接</button>
+        </header>
+        <h3 class="case-title" data-i18n="gate.title">AI 先只看不发，涉及费用就转人工。</h3>
+        <div class="case-body">
+          <dl class="case-text">
+            <dt class="mono" data-i18n="work.situation">场景</dt><dd data-i18n="gate.situation">医院原有的 CRM、客服和渠道系统各自运作。线索要整理，咨询要及时回复，但费用和诊疗承诺这类话，不能让 AI 随口说。</dd>
+            <dt class="mono" data-i18n="work.did">我们做了什么</dt><dd data-i18n="gate.did">在原系统之上补一层工作台和任务层：线索按规则分池，规则先空跑出报告、确认无误再执行，对生产 CRM 只读。AI 坐席在影子模式下给出带来源的建议回复，由客服采用、修改或转人工；触发护栏规则的问题强制转人工。</dd>
+            <dt class="mono todo" data-i18n="work.open">还待验证</dt><dd data-i18n="gate.open">目前处于演示与小组验证阶段，没有全面上线；写入生产系统尚未启用。</dd>
+          </dl>
+          <div class="case-media">
+            <figure class="shot phone">
+              <button type="button" class="zoom" data-image="assets/agent-guardrail.webp" data-caption="gate.fig"><img src="assets/agent-guardrail.webp" width="453" height="836" loading="lazy" alt="AI 坐席示意界面：建议回复附来源，涉及费用的问题按护栏规则强制转人工" data-alt="gate.fig"></button>
+              <figcaption class="mono" data-i18n="gate.fig">按实际功能重绘的示意界面 · 演示数据，不是真实会话</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- E: office workflow -->
+      <article class="case case-compact" id="case-office"><span id="office-demo" class="anchor-alias"></span>
+        <header class="case-head">
+          <span class="case-id mono">D</span>
+          <span class="case-cat mono" data-i18n="office.category">办公与财务流转</span>
+          <a class="cap-tag mono" href="./#cap-2" data-i18n="cap.tag.2">能力 02 · AI 工作流</a>
+          <span class="status" data-phase="half" data-i18n="office.status">演示站已发布 · 2026 年 9 月</span>
+          <button type="button" class="share mono" data-share="case-office" data-i18n="share">复制案例链接</button>
+        </header>
+        <div class="compact-body">
+          <h3 class="case-title" data-i18n="office.title">一份申请，从补齐资料到审批办理。</h3>
+          <p data-i18n="office.desc">为教育出版机构开发：申请与附件、缺件补正、角色待办、审批退回、费用汇总和操作记录，串成一段可追踪的流程。正式账号与业务试用另行推进。不是总账、审计或报税系统。</p>
+        </div>
+      </article>
+
       <!-- C: healthcare GEO -->
       <article class="case" id="case-geo">
         <header class="case-head">
-          <span class="case-id mono">C</span>
+          <span class="case-id mono">E</span>
           <span class="case-cat mono" data-i18n="geo.category">医疗 · AI 搜索可见度（GEO）</span>
-          <a class="cap-tag mono" href="./#cap-2" data-i18n="cap.tag.2">能力 02 · AI 搜索可见度</a>
           <span class="status" data-phase="full" data-i18n="geo.status">检测报告已交付 · 2026 年 5 月</span>
           <button type="button" class="share mono" data-share="case-geo" data-i18n="share">复制案例链接</button>
         </header>
@@ -174,46 +214,6 @@
               <figcaption class="mono" data-i18n="geo.fig">真实检测数据的汇总，客户匿名。这是一次基线，不是优化后的效果。</figcaption>
             </figure>
           </div>
-        </div>
-      </article>
-
-      <!-- D: controlled AI in healthcare operations -->
-      <article class="case" id="case-gate">
-        <header class="case-head">
-          <span class="case-id mono">D</span>
-          <span class="case-cat mono" data-i18n="gate.category">医疗运营 · 可控 AI 接入</span>
-          <a class="cap-tag mono" href="./#cap-1" data-i18n="cap.tag.1">能力 01 · AI 业务流程</a>
-          <span class="status" data-phase="half" data-i18n="gate.status">演示与小组验证</span>
-          <button type="button" class="share mono" data-share="case-gate" data-i18n="share">复制案例链接</button>
-        </header>
-        <h3 class="case-title" data-i18n="gate.title">AI 先只看不发，涉及费用就转人工。</h3>
-        <div class="case-body">
-          <dl class="case-text">
-            <dt class="mono" data-i18n="work.situation">场景</dt><dd data-i18n="gate.situation">医院原有的 CRM、客服和渠道系统各自运作。线索要整理，咨询要及时回复，但费用和诊疗承诺这类话，不能让 AI 随口说。</dd>
-            <dt class="mono" data-i18n="work.did">我们做了什么</dt><dd data-i18n="gate.did">在原系统之上补一层工作台和任务层：线索按规则分池，规则先空跑出报告、确认无误再执行，对生产 CRM 只读。AI 坐席在影子模式下给出带来源的建议回复，由客服采用、修改或转人工；触发护栏规则的问题强制转人工。</dd>
-            <dt class="mono todo" data-i18n="work.open">还待验证</dt><dd data-i18n="gate.open">目前处于演示与小组验证阶段，没有全面上线；写入生产系统尚未启用。</dd>
-          </dl>
-          <div class="case-media">
-            <figure class="shot phone">
-              <button type="button" class="zoom" data-image="assets/agent-guardrail.webp" data-caption="gate.fig"><img src="assets/agent-guardrail.webp" width="453" height="836" loading="lazy" alt="AI 坐席示意界面：建议回复附来源，涉及费用的问题按护栏规则强制转人工" data-alt="gate.fig"></button>
-              <figcaption class="mono" data-i18n="gate.fig">按实际功能重绘的示意界面 · 演示数据，不是真实会话</figcaption>
-            </figure>
-          </div>
-        </div>
-      </article>
-
-      <!-- E: office workflow -->
-      <article class="case case-compact" id="case-office"><span id="office-demo" class="anchor-alias"></span>
-        <header class="case-head">
-          <span class="case-id mono">E</span>
-          <span class="case-cat mono" data-i18n="office.category">办公与财务流转</span>
-          <a class="cap-tag mono" href="./#cap-1" data-i18n="cap.tag.1">能力 01 · AI 业务流程</a>
-          <span class="status" data-phase="half" data-i18n="office.status">演示站已发布 · 2026 年 9 月</span>
-          <button type="button" class="share mono" data-share="case-office" data-i18n="share">复制案例链接</button>
-        </header>
-        <div class="compact-body">
-          <h3 class="case-title" data-i18n="office.title">一份申请，从补齐资料到审批办理。</h3>
-          <p data-i18n="office.desc">为教育出版机构开发：申请与附件、缺件补正、角色待办、审批退回、费用汇总和操作记录，串成一段可追踪的流程。正式账号与业务试用另行推进。不是总账、审计或报税系统。</p>
         </div>
       </article>
     </div>
