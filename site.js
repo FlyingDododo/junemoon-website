@@ -83,7 +83,7 @@
     onFirstView(annotated, el => el.classList.remove('pending'), { rootMargin: '0px 0px -25% 0px' });
     const lanes = $$('.lanes'); lanes.forEach(el => el.classList.add('pending'));
     onFirstView(lanes, el => el.classList.remove('pending'), { rootMargin: '0px 0px -20% 0px' });
-    const insets = $$('.inset-shot'); insets.forEach(el => el.classList.add('pending'));
+    const insets = $$('.inset-shot, .rep-visual'); insets.forEach(el => el.classList.add('pending'));
     onFirstView(insets, el => el.classList.remove('pending'), { rootMargin: '0px 0px -20% 0px' });
     const geo = $$('.geo-chart'); geo.forEach(el => el.classList.add('pending'));
     onFirstView(geo, el => el.classList.remove('pending'), { rootMargin: '0px 0px -20% 0px' });
