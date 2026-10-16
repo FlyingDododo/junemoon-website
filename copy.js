@@ -33,6 +33,8 @@
   'cap.1.name': ['AI 业务流程', 'AI 業務流程', 'AI-powered workflows'],
   'cap.1.title': ['资料进来，事情办完。', '資料進來，事情辦完。', 'Documents in. Work done.'],
   'cap.1.desc': ['扫描件、试卷、咨询线索——这些以前靠人一份份看、一条条记的资料工作，我们做成 AI 先整理、人来核准的系统。原件留底，不确定的交给人。', '掃描件、試卷、諮詢查詢——這些以前靠人逐份看、逐條記的資料工作，我們做成 AI 先整理、人來核准的系統。原件留底，不確定的交給人。', 'Scanned letters, exam papers, incoming enquiries — paperwork once read and recorded by hand. We build systems where AI does the first pass and a person approves. Originals are kept; anything uncertain goes to a person.'],
+  'cap.1.inset': ['是 5 月 6 日还是 6 月 5 日？AI 不猜，留空交给人。', '是 5 月 6 日還是 6 月 5 日？AI 不猜，留空交給人。', 'May 6 or June 5? The AI doesn’t guess. It leaves the field blank for a person.'],
+  'cap.1.inset.alt': ['日期栏位留空：原文 05/06/2027 的日月顺序无法确认，模型推测不能作为正式到期日', '日期欄位留空：原文 05/06/2027 的日月次序無法確認，模型推測不能作為正式到期日', 'Date field left blank: the day/month order of 05/06/2027 can’t be confirmed, so the model’s guess isn’t used as the official deadline'],
   'cap.1.proof': ['会计档案工作台 · 题库 AI 录入 · 医疗线索分池', '會計檔案工作台 · 題庫 AI 錄入 · 醫療查詢分池', 'Accounting document workbench · AI question entry · Healthcare lead sorting'],
   'cap.2.name': ['AI 搜索可见度', 'AI 搜尋可見度', 'AI search visibility'],
   'cap.2.title': ['让客户在 AI 的回答里找到你。', '讓客戶在 AI 的回答裏找到你。', 'Be found in AI’s answers.'],
@@ -51,9 +53,6 @@
   'cap.step.3': ['试运维 2 周', '試運維 2 週', 'Two-week trial'],
   'cap.step.4': ['运维 ∥ 开发', '運維 ∥ 開發', 'Ops ∥ Development'],
 
-  'home.idea.title': ['增效，不靠裁员。', '增效，不靠裁員。', 'Growth, not headcount cuts.'],
-  'home.idea.d': ['我们从“哪些事一直应该做，但以前请不起人、算不过账”开始，而不是从“能少用几个人”开始。', '我們由「哪些事一直應該做，但以前請不到人、計不過數」開始，而不是由「可以少用幾個人」開始。', 'We start from “what should you have been doing all along, but couldn’t staff or justify?” — not “how many people can we save?”'],
-  'home.idea.link': ['我们的思路与方法 →', '我們的思路與方法 →', 'Our thinking and approach →'],
 
   'work.page.title': ['案例 · 佳裕云智 Junemoon', '案例 · 佳裕雲智 Junemoon', 'Work · Junemoon'],
   'method.page.title': ['方法 · 佳裕云智 Junemoon', '方法 · 佳裕雲智 Junemoon', 'Approach · Junemoon'],
@@ -246,7 +245,7 @@
   'm.refs': ['设计参考（公开方法，不代表认证或背书）：', '設計參考（公開方法，不代表認證或背書）：', 'Design references (public guidance, not certification or endorsement):'],
 
   'ct.kicker': ['06 · 联系', '06 · 聯絡', '06 · Contact'],
-  'ct.title': ['把你最想做、却一直没做成的那件事告诉我们。我们先一起把它看清楚。', '把你最想做、卻一直未做成的那件事告訴我們。我們先一起把它看清楚。', 'Tell us the thing you’ve always wanted to do but never managed to. We’ll start by getting clear on it together.'],
+  'ct.title': ['把一直想做、却没做成的那件事告诉我们。', '把一直想做、卻未做成的那件事告訴我們。', 'Tell us the thing you’ve always meant to do, but never got done.'],
   'ct.lead': ['一封邮件、几句话就够：你的业务是什么，那件事卡在哪里。我们会回复是否适合、可以怎样开始。', '一封電郵、幾句話就夠：你的業務是甚麼，那件事卡在哪裏。我們會回覆是否適合、可以怎樣開始。', 'A short email is enough: what your business does, and where that one thing is stuck. We’ll reply with whether we’re a fit and how we could start.'],
   'ct.btn': ['发邮件给我们', '發電郵給我們', 'Email us'],
   'contact.copy': ['复制联系方式', '複製聯絡方式', 'Copy contact details'],

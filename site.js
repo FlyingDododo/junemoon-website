@@ -81,6 +81,8 @@
     onFirstView(reveals, el => el.classList.remove('pending'));
     const annotated = $$('.annotated'); annotated.forEach(el => el.classList.add('pending'));
     onFirstView(annotated, el => el.classList.remove('pending'), { rootMargin: '0px 0px -25% 0px' });
+    const insets = $$('.inset-shot'); insets.forEach(el => el.classList.add('pending'));
+    onFirstView(insets, el => el.classList.remove('pending'), { rootMargin: '0px 0px -20% 0px' });
     const geo = $$('.geo-chart'); geo.forEach(el => el.classList.add('pending'));
     onFirstView(geo, el => el.classList.remove('pending'), { rootMargin: '0px 0px -20% 0px' });
     if ($('#fig-gateway')) onFirstView([$('#fig-gateway')], fig => {

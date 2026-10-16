@@ -106,8 +106,12 @@
           <p class="cap-proof mono" data-i18n="cap.1.proof">会计档案工作台 · 题库 AI 录入 · 医疗线索分池</p>
           <a class="cap-more" href="work.html#case-scan" data-i18n="cap.more">看完整案例 →</a>
         </div>
-        <figure class="cap-visual shot">
-          <a class="zoom" href="work.html#case-scan"><img src="assets/acct-review.webp" width="1250" height="678" loading="lazy" alt="档案工作台核验界面：左侧为扫描原文，右侧为模型提出的公司、文件类别与日期" data-alt="scan.fig"></a>
+        <figure class="cap-visual shot inset-shot">
+          <div class="inset-stage">
+            <a class="zoom inset-back" href="work.html#case-scan" tabindex="-1" aria-hidden="true"><img src="assets/acct-review.webp" width="1250" height="678" loading="lazy" alt=""></a>
+            <a class="zoom inset-card" href="work.html#case-scan"><img src="assets/acct-ambiguous.webp" width="346" height="415" loading="lazy" alt="日期栏位留空：原文 05/06/2027 的日月顺序无法确认，模型推测不能作为正式到期日" data-alt="cap.1.inset.alt"></a>
+            <p class="inset-note"><span class="mono">05/06/2027</span><span data-i18n="cap.1.inset">是 5 月 6 日还是 6 月 5 日？AI 不猜，留空交给人。</span></p>
+          </div>
           <figcaption class="mono" data-i18n="scan.fig">真实界面截图 · 虚构公司与文书 · 繁体中文界面</figcaption>
         </figure>
       </article>
@@ -165,22 +169,12 @@
     </div>
   </section>
 
-  <!-- Thinking, in one breath -->
-  <section class="section idea-band">
-    <div class="wrap idea-grid">
-      <h2 data-i18n="home.idea.title">增效，不靠裁员。</h2>
-      <div>
-        <p class="lead" data-i18n="home.idea.d">我们从“哪些事一直应该做，但以前请不起人、算不过账”开始，而不是从“能少用几个人”开始。</p>
-        <a class="cap-more" href="approach.html" data-i18n="home.idea.link">我们的思路与方法 →</a>
-      </div>
-    </div>
-  </section>
 
   <section class="section contact" id="contact">
     <div class="wrap contact-grid">
       <p class="kicker mono" data-i18n="nav.contact">联系</p>
       <div>
-        <h2 data-i18n="ct.title">把你最想做、却一直没做成的那件事告诉我们。我们先一起把它看清楚。</h2>
+        <h2 data-i18n="ct.title">把一直想做、却没做成的那件事告诉我们。</h2>
         <p class="lead" data-i18n="ct.lead">一封邮件、几句话就够：你的业务是什么，那件事卡在哪里。我们会回复是否适合、可以怎样开始。</p>
         <div class="actions">
           <a class="button primary" href="mailto:riversense11@gmail.com"><span data-i18n="ct.btn">发邮件给我们</span><span class="arrow" aria-hidden="true">→</span></a>
