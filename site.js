@@ -27,17 +27,19 @@
     $$('[data-alt]').forEach(el => { el.alt = t(el.dataset.alt); });
     $$('[data-aria]').forEach(el => el.setAttribute('aria-label', t(el.dataset.aria)));
     $$('[data-lang]').forEach(el => el.setAttribute('aria-pressed', String(el.dataset.lang === lang)));
-    $('meta[name="description"]').content = t('meta.desc');
-    $('meta[property="og:title"]').content = t('meta.title');
-    $('meta[property="og:description"]').content = t('meta.desc');
+    const desc = document.body.dataset.desc;  // pages with their own description also share under their own title
+    $('meta[name="description"]').content = t(desc || 'meta.desc');
+    $('meta[property="og:title"]').content = desc ? document.title : t('meta.title');
+    $('meta[property="og:description"]').content = t(desc || 'meta.desc');
     if (currentCaption) { $('#image-caption').textContent = t(currentCaption); $('#full-image').alt = t(currentCaption); }
     // Keep the language when moving between pages.
     $$('a[href]').forEach(a => {
       const raw = a.getAttribute('href');
-      if (!/^(\.\/|work\.html|approach\.html)/.test(raw)) return;
+      if (!/^(\.\/|work\.html|approach\.html|studio\.html)/.test(raw)) return;
       const [path, hash] = raw.split('#');
       a.setAttribute('href', path.split('?')[0] + '?lang=' + lang + (hash ? '#' + hash : ''));
     });
+    document.dispatchEvent(new CustomEvent('langchange', { detail: lang }));
     if (remember) {
       try { localStorage.setItem('jy_lang', lang); } catch {}
       try { const url = new URL(location.href); url.searchParams.set('lang', lang); history.replaceState(null, '', url); } catch {}

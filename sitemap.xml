@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://myjunemoon.com/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://myjunemoon.com/?lang=zh-cn"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://myjunemoon.com/?lang=zh-hk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myjunemoon.com/?lang=en"/>
+  </url>
+  <url>
+    <loc>https://myjunemoon.com/work</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://myjunemoon.com/work?lang=zh-cn"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://myjunemoon.com/work?lang=zh-hk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myjunemoon.com/work?lang=en"/>
+  </url>
+  <url>
+    <loc>https://myjunemoon.com/studio</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://myjunemoon.com/studio?lang=zh-cn"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://myjunemoon.com/studio?lang=zh-hk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myjunemoon.com/studio?lang=en"/>
+  </url>
+  <url>
+    <loc>https://myjunemoon.com/approach</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://myjunemoon.com/approach?lang=zh-cn"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant-HK" href="https://myjunemoon.com/approach?lang=zh-hk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myjunemoon.com/approach?lang=en"/>
+  </url>
+</urlset>
