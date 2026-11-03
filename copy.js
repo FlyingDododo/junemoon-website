@@ -322,7 +322,6 @@
   'ct.lead': ['一封邮件、几句话就够：你的业务是什么，那件事卡在哪里。我们会回复是否适合、可以怎样开始。', '一封電郵、幾句話就夠：你的業務是甚麼，那件事卡在哪裏。我們會回覆是否適合、可以怎樣開始。', 'A short email is enough: what your business does, and where that one thing is stuck. We’ll reply with whether we’re a fit and how we could start.'],
   'ct.btn': ['发邮件给我们', '發電郵給我們', 'Email us'],
   'contact.copy': ['复制联系方式', '複製聯絡方式', 'Copy contact details'],
-  'brief.download': ['下载公司介绍（PDF）', '下載公司介紹（PDF，簡體）', 'Download company profile (PDF, Chinese)'],
   'ct.note': ['如果这个页面是别人分享给你的，也可以直接联系分享给你的人。', '如果這個頁面是別人分享給你的，也可以直接聯絡分享給你的人。', 'If someone shared this page with you, you can also reach out to them directly.'],
   'ft.legalName': ['佳裕云智（深圳）科技有限公司', '佳裕云智（深圳）科技有限公司', '佳裕云智（深圳）科技有限公司 · Shenzhen'],
   'ft.top': ['回到顶部 ↑', '回到頂部 ↑', 'Back to top ↑'],
