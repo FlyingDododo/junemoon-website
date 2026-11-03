@@ -293,6 +293,9 @@ p { color: var(--ink-2); text-wrap: pretty; }
 .facts li + li { padding-left: 28px; border-left: 1px solid var(--line); }
 .facts h3 { font-size: 18px; }
 .facts p { font-size: 15px; }
+.clients li { padding-bottom: 24px; }
+.clients li:nth-child(3n + 1) { padding-left: 0; border-left: 0; }
+.clients li:nth-child(n + 4) { border-top: 1px solid var(--line); }
 
 /* Capabilities */
 .caps-head { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: 24px clamp(24px, 4vw, 56px); margin-bottom: clamp(24px, 4vw, 48px); }
@@ -469,7 +472,7 @@ p { color: var(--ink-2); text-wrap: pretty; }
 .pin-dot.pin-human { background: var(--amber); }
 .shot-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .shot.detail figcaption { font-size: 13px; }
-.shot.strip .zoom img { aspect-ratio: 2170 / 354; object-fit: cover; }
+.shot.export .zoom img { aspect-ratio: 2170 / 354; object-fit: cover; }
 .shot.phone { max-width: 340px; justify-self: start; }
 .shot.phone .zoom { border-radius: 18px; }
 
@@ -626,7 +629,6 @@ dialog::backdrop { background: rgba(13, 27, 46, .62); backdrop-filter: blur(4px)
   .gw::before { display: none; }
   .method { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 32px; }
   .case-body { grid-template-columns: 1fr; }
-  .case-media { order: -1; }
   .shot.phone { justify-self: start; }
   .case-compact .compact-body { grid-template-columns: 1fr; gap: 12px; }
 }
