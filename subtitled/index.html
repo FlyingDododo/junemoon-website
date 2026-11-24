@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,198 +7,271 @@
 <meta name="description" content="Parents in China are asking about your school. Someone else is answering.">
 <meta name="robots" content="noindex">
 <link rel="preload" href="fonts/NotoSansSC-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Archivo-VF.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="subtitled.css">
+<script>try{if(localStorage.getItem('st-lang')==='zh'||/[?&]lang=zh/.test(location.search)){document.documentElement.setAttribute('data-lang','zh')}}catch(e){}</script>
 </head>
 <body>
 
-<header class="bar">
-  <span class="gloss tag">THE KIND OF QUESTION PARENTS TYPE INTO XIAOHONGSHU</span>
-  <button class="gloss lang" type="button" id="lang" aria-label="Hide the English for two seconds">中 / EN</button>
+<header class="nav">
+  <div class="w nav-in">
+    <a class="mark" href="#top" aria-label="Subtitled, back to top"><span class="sq" aria-hidden="true">问</span><span data-brand>Subtitled</span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#ask"><span lang="zh-Hans">问</span> ASK</a>
+      <a href="#audit"><span lang="zh-Hans">查</span> AUDIT</a>
+      <a href="#answer"><span lang="zh-Hans">答</span> ANSWER</a>
+      <a href="#price"><span class="L-en">PRICE</span><span class="L-zh" lang="zh-Hans">价格</span></a>
+    </nav>
+    <div class="nav-r">
+      <button class="lang" type="button" id="lang" aria-label="Switch language / 切换语言"><span class="o-en">EN</span><span class="o-zh" lang="zh-Hans">中文</span></button>
+      <a class="btn sm" data-mail href="mailto:riversense11@gmail.com?subject=One-page%20audit%20for%20%7Bschool%7D"><span class="L-en">Free audit</span><span class="L-zh" lang="zh-Hans">免费体检</span></a>
+    </div>
+  </div>
 </header>
 
-<main>
-<section class="screen s1" id="s1">
-  <p class="zh q" lang="zh-Hans" aria-label="周末不回家的孩子，在学校做什么？">
-    <span class="w" style="--i:0"><span class="hl zh-t">周末</span><span class="gloss en">weekends</span></span>
-    <span class="w" style="--i:1"><span class="hl zh-t">不回家的</span><span class="gloss en">who don’t go home</span></span>
-    <span class="w" style="--i:2"><span class="hl zh-t">孩子，</span><span class="gloss en">the children</span></span>
-    <span class="w" style="--i:3"><span class="hl zh-t">在学校</span><span class="gloss en">at school</span></span>
-    <span class="w" style="--i:4"><span class="hl zh-t">做什么？</span><span class="gloss en">do what?</span></span>
-  </p>
-  <p class="gloss full en">“What do the children who stay at weekends actually do?”</p>
+<main id="top">
 
-  <div class="copy">
-    <h1 id="h1" data-alt="This is what the page looks like to you without us.">Parents in China are asking about your school. Someone else is answering.</h1>
-    <p class="body">Xiaohongshu is where many Chinese families compare schools before they speak to anyone. If you have no account there, the answers come from agents and former students. We open your account, write it in Chinese, show you every word in English first, and reply to parents on working days.</p>
-    <p class="cta"><a class="btn" data-mail href="mailto:riversense11@gmail.com?subject=One-page%20audit%20for%20%7Bschool%7D">Ask for your one-page audit</a></p>
-    <p class="gloss fine">We search your school’s name and send you what parents see. Free. One page.</p>
-  </div>
-</section>
-
-<!-- 2 · 你不在场 -->
-<section class="screen s2 split" id="s2">
-  <span class="gloss tag no">02 / 08</span>
-  <div class="txt">
-    <p class="zh ln" lang="zh-Hans">你不在场。</p>
-    <p class="gloss sub en ln">You are not in the room.</p>
-    <p class="body">Search your school’s name on Xiaohongshu and you’ll likely find posts by agents, former students and parents. If you’ve never opened an account, none of them are yours.</p>
-    <p class="more"><a class="lnk" data-mail href="mailto:riversense11@gmail.com?subject=One-page%20audit%20for%20%7Bschool%7D">Ask for yours →</a></p>
-  </div>
-  <figure class="sheet" aria-label="Sample layout of the one-page audit">
-    <div class="sh-top gloss"><span><span data-brand>Subtitled</span> · ONE-PAGE AUDIT</span><span>{SCHOOL} · {DATE}</span></div>
-    <div class="sh-a">
-      <p class="gloss sh-lead">WE SEARCHED YOUR SCHOOL’S NAME ON XIAOHONGSHU</p>
-      <p class="sh-zh" lang="zh-Hans">别人写了你 <b>{N}</b> 条</p>
-      <p class="gloss en">Others have written {N} posts about you</p>
-    </div>
-    <div class="sh-b">
-      <p class="sh-zh" lang="zh-Hans">你自己写了</p>
-      <p class="gloss en">You have written</p>
-      <p class="zero" aria-label="zero">0</p>
-    </div>
-    <figcaption class="sh-foot">SAMPLE LAYOUT · YOUR NUMBERS GO HERE</figcaption>
-  </figure>
-</section>
-
-<!-- 3 · 一个月 -->
-<section class="screen s3" id="s3">
-  <span class="gloss tag no">03 / 08</span>
-  <p class="zh ln" lang="zh-Hans"><span class="ph">一个月，</span><span class="ph">十二条。</span></p>
-  <p class="gloss sub en ln">One month. Twelve posts.</p>
-  <div class="month">
-    <div class="calwrap">
-      <div class="wk gloss" aria-hidden="true"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span></div>
-      <ol class="cal" id="cal" aria-label="A sample month: twelve posts">
-        <li></li><li></li><li><i>1</i></li>
-        <li class="on"><button type="button" class="qa" data-zh="周末留校的孩子，在学校做什么？" data-en="What do boarders actually do at weekends?"><b lang="zh-Hans">问答</b><span class="gloss">Q&amp;A</span></button><i>2</i></li>
-        <li><i>3</i></li>
-        <li class="on"><button type="button" class="day" data-zh="一个普通的周三，从 6:50 到 21:30" data-en="An ordinary Wednesday, from 6:50 to 21:30"><b lang="zh-Hans">一天</b><span class="gloss">A day</span></button><i>4</i></li>
-        <li><i>5</i></li>
-        <li><i>6</i></li>
-        <li class="on"><button type="button" class="fee" data-zh="申请截止日和面试时间，一张表看完" data-en="Application deadlines and interview dates, on one page"><b lang="zh-Hans">日期和费用</b><span class="gloss">Dates &amp; fees</span></button><i>7</i></li>
-        <li><i>8</i></li>
-        <li class="on"><button type="button" class="qa" data-zh="第一次离家，孩子想家了怎么办？" data-en="What happens when a child is homesick?"><b lang="zh-Hans">问答</b><span class="gloss">Q&amp;A</span></button><i>9</i></li>
-        <li><i>10</i></li>
-        <li class="on"><button type="button" class="qa" data-zh="孩子生病了，谁带去看医生？" data-en="If my child is ill, who takes them to the doctor?"><b lang="zh-Hans">问答</b><span class="gloss">Q&amp;A</span></button><i>11</i></li>
-        <li><i>12</i></li>
-        <li><i>13</i></li>
-        <li class="on"><button type="button" class="day" data-zh="寄宿生的周六" data-en="A boarder’s Saturday"><b lang="zh-Hans">一天</b><span class="gloss">A day</span></button><i>14</i></li>
-        <li><i>15</i></li>
-        <li class="on"><button type="button" class="qa" data-zh="手机能带吗？什么时候能用？" data-en="Can students keep their phones? When can they use them?"><b lang="zh-Hans">问答</b><span class="gloss">Q&amp;A</span></button><i>16</i></li>
-        <li><i>17</i></li>
-        <li class="on"><button type="button" class="fee" data-zh="学费之外，还要付哪些钱" data-en="Every cost beyond tuition"><b lang="zh-Hans">日期和费用</b><span class="gloss">Dates &amp; fees</span></button><i>18</i></li>
-        <li><i>19</i></li>
-        <li><i>20</i></li>
-        <li class="on"><button type="button" class="qa" data-zh="英语跟不上，学校怎么帮？" data-en="What if my child’s English isn’t ready?"><b lang="zh-Hans">问答</b><span class="gloss">Q&amp;A</span></button><i>21</i></li>
-        <li><i>22</i></li>
-        <li class="on"><button type="button" class="day" data-zh="考试周的一天" data-en="A day in exam week"><b lang="zh-Hans">一天</b><span class="gloss">A day</span></button><i>23</i></li>
-        <li><i>24</i></li>
-        <li class="on"><button type="button" class="qa" data-zh="有时差，怎么联系老师？" data-en="How do I reach a teacher across the time difference?"><b lang="zh-Hans">问答</b><span class="gloss">Q&amp;A</span></button><i>25</i></li>
-        <li><i>26</i></li>
-        <li><i>27</i></li>
-        <li class="on"><button type="button" class="fee" data-zh="押金、退款和分期付款" data-en="Deposits, refunds and paying in instalments"><b lang="zh-Hans">日期和费用</b><span class="gloss">Dates &amp; fees</span></button><i>28</i></li>
-        <li><i>29</i></li>
-        <li><i>30</i></li>
-        <li><i>31</i></li>
-        <li></li><li></li>
-      </ol>
-      <dl class="legend">
-        <div><dt lang="zh-Hans">问答</dt><dd><span class="gloss">Q&amp;A</span> One question parents are asking, answered.</dd></div>
-        <div><dt lang="zh-Hans">一天</dt><dd><span class="gloss">A day</span> An ordinary day, hour by hour.</dd></div>
-        <div><dt lang="zh-Hans">日期和费用</dt><dd><span class="gloss">Dates &amp; fees</span> Deadlines, and every payment.</dd></div>
-      </dl>
-    </div>
-    <aside class="side">
-      <ul class="stats gloss">
-        <li>12 POSTS</li>
-        <li>REPLIES ON WORKING DAYS</li>
-        <li>ONE-PAGE REPORT ON THE 1ST</li>
-      </ul>
-      <div class="readout" id="readout" aria-live="polite">
-        <p class="gloss ro-k"><span class="hint-hover">HOVER A DARK SQUARE</span><span class="hint-tap">TAP A DARK SQUARE</span></p>
-        <p class="ro-zh" lang="zh-Hans" id="ro-zh">周末留校的孩子，在学校做什么？</p>
-        <p class="gloss en" id="ro-en">What do boarders actually do at weekends?</p>
-        <p class="gloss ro-s">SAMPLE ONLY · NOT PUBLISHED ANYWHERE</p>
+<!-- 01 · 问 · ASK — white field, the parent's question -->
+<section class="f f-chalk hero" id="s1">
+  <div class="w">
+    <div class="corner"><span><span data-brand>Subtitled</span></span><span>01 · <span lang="zh-Hans">问</span> · ASK</span></div>
+    <p class="label"><span class="L-en">The kind of question parents type into Xiaohongshu</span><span class="L-zh" lang="zh-Hans">家长在小红书上会搜的那种问题</span></p>
+    <p class="q" lang="zh-Hans" aria-label="周末不回家的孩子，在学校做什么？">
+      <span class="wd" style="--i:0"><span class="hl">周末</span><span class="gl">weekends</span></span>
+      <span class="wd" style="--i:1"><span class="hl">不回家的</span><span class="gl">who don’t go home</span></span>
+      <span class="wd" style="--i:2"><span class="hl">孩子，</span><span class="gl">the children</span></span>
+      <span class="wd" style="--i:3"><span class="hl">在学校</span><span class="gl">at school</span></span>
+      <span class="wd" style="--i:4"><span class="hl">做什么？</span><span class="gl">do what?</span></span>
+    </p>
+    <div class="hero-b">
+      <h1 class="disp"><span class="L-en">Parents in China are asking about your school. Someone else is answering.</span><span class="L-zh" lang="zh-Hans">中国家长在问你的学校。<br>回答他们的，不是你。</span></h1>
+      <div class="hero-side">
+        <p class="body"><span class="L-en">Xiaohongshu is where many Chinese families compare schools before they speak to anyone. If you have no account there, the answers come from agents and former students. We open your account, write it in Chinese, show you every word in English first, and reply to parents on working days.</span><span class="L-zh" lang="zh-Hans">很多中国家庭在联系学校之前，会先上小红书比较学校。你没有账号，答案就来自中介和以前的学生。我们替你开号，用中文写，每个字先给你看英文，工作日回复家长。</span></p>
+        <p class="cta"><a class="btn" data-mail href="mailto:riversense11@gmail.com?subject=One-page%20audit%20for%20%7Bschool%7D"><span class="L-en">Ask for your one-page audit</span><span class="L-zh" lang="zh-Hans">要一份免费的一页体检</span></a></p>
+        <p class="fine"><span class="L-en">We search your school’s name and send you what parents see. Free. One page.</span><span class="L-zh" lang="zh-Hans">我们搜你学校的名字，把家长看到的整理成一页给你。免费。</span></p>
       </div>
-    </aside>
-  </div>
-</section>
-
-<!-- 4 · 每一个字 -->
-<section class="screen s4 split" id="s4">
-  <span class="gloss tag no">04 / 08</span>
-  <div class="txt">
-    <p class="zh ln" lang="zh-Hans"><span class="ph">每一个字，</span><span class="ph">你都看得懂。</span></p>
-    <p class="gloss sub en ln">Every word, in English, before it goes out.</p>
-    <p class="body">Each post reaches you two days before it’s published, Chinese on the left, English on the right. Change anything. Say nothing for 48 hours and it goes out as written.</p>
-  </div>
-  <figure class="draft" aria-label="A sample post, Chinese on the left, English on the right">
-    <div class="dr-row dr-h gloss"><span>中文</span><span>ENGLISH</span></div>
-    <div class="dr-row dr-title"><p lang="zh-Hans">寄宿学校的一个周三</p><p>A Wednesday at boarding school</p></div>
-    <div class="dr-row"><p lang="zh-Hans">很多家长问：<span class="hl">“孩子住校，晚上谁在？”</span>我们按钟点写一个普通的周三。</p><p>Many parents ask: “Who is there at night?” Here is an ordinary Wednesday, by the clock.</p></div>
-    <div class="dr-row"><p lang="zh-Hans"><b>6:50</b> 起床。宿舍老师敲门，十五分钟后去食堂吃早饭。</p><p><b>6:50</b> Wake up. The house tutor knocks; breakfast is fifteen minutes later.</p></div>
-    <div class="dr-row"><p lang="zh-Hans"><b>8:30</b> 第一节课。上午四节，中间有一次课间休息。</p><p><b>8:30</b> First lesson. Four in the morning, with a break in the middle.</p></div>
-    <div class="dr-row"><p lang="zh-Hans"><b>14:00</b> 周三下午是运动时间，项目由孩子自己选。</p><p><b>14:00</b> Wednesday afternoon is sport. Students choose their own.</p></div>
-    <div class="dr-row"><p lang="zh-Hans"><b>19:00</b> 晚自习两小时，有老师在教室，可以问作业。</p><p><b>19:00</b> Two hours of prep, with a teacher in the room to help.</p></div>
-    <div class="dr-row"><p lang="zh-Hans"><b>21:30</b> 熄灯。宿舍老师就住在楼里，夜里有事随时找得到。</p><p><b>21:30</b> Lights out. The house tutor lives in the building and can be found at any hour.</p></div>
-    <figcaption class="dr-foot gloss">SAMPLE ONLY · NOT PUBLISHED ANYWHERE</figcaption>
-  </figure>
-</section>
-
-<!-- 5 · 账号是你的 -->
-<section class="screen s5" id="s5">
-  <span class="gloss tag no">05 / 08</span>
-  <p class="zh ln" lang="zh-Hans">账号是你的。</p>
-  <p class="gloss sub en ln">The account is yours.</p>
-  <dl class="rows">
-    <div><dt class="gloss">OPENED IN YOUR NAME</dt><dd>The account is registered to the school from the first day.</dd></div>
-    <div><dt class="gloss">LEAVE WHEN YOU LIKE</dt><dd>You keep the account, every post, every image and the list of questions parents asked.</dd></div>
-    <div><dt class="gloss">NOTHING ELSE TOUCHED</dt><dd>We never ask for access to your website, your admissions system or your inbox.</dd></div>
-  </dl>
-  <p class="body after">Questions about offers, fees or visas are translated and passed to you. We don’t answer for the school.</p>
-</section>
-
-<!-- 6 · 不保证的事 -->
-<section class="screen s6" id="s6">
-  <span class="gloss tag no">06 / 08</span>
-  <p class="zh ln" lang="zh-Hans">不保证的事。</p>
-  <p class="gloss sub en ln">What we don’t promise.</p>
-  <div class="two">
-    <div>
-      <p class="gloss k">WE DON’T PROMISE</p>
-      <ul class="big">
-        <li>Followers.</li>
-        <li>Enquiries.</li>
-        <li>Admissions.</li>
-      </ul>
-    </div>
-    <div>
-      <p class="gloss k">WE DO</p>
-      <ul class="plain">
-        <li>Twelve posts a month, on the days agreed.</li>
-        <li>A reply to every parent on the same working day.</li>
-        <li>A one-page report on the first of each month.</li>
-      </ul>
     </div>
   </div>
 </section>
 
-<!-- 7 · 价钱 -->
-<section class="screen s7" id="s7">
-  <span class="gloss tag no">07 / 08</span>
-  <p class="zh ln" lang="zh-Hans"><span class="ph">一个月</span> <span class="ph"><span class="num">1,500</span> 美元。</span></p>
-  <p class="gloss sub en ln">US$1,500 a month.</p>
-  <p class="body">Twelve posts, replies, the monthly report. First term three months. Invoiced by Boyatt Limited, Hong Kong.</p>
-  <p class="gloss fine">Not included: advertising, influencer deals, WeChat, filming.</p>
+<!-- 问 · the wall of questions — black field -->
+<section class="f f-ink" id="ask">
+  <div class="w">
+    <div class="corner"><span><span data-brand>Subtitled</span></span><span>02 · <span lang="zh-Hans">问</span> · ASK</span></div>
+    <div class="head">
+      <p class="zh ln nw" lang="zh-Hans">家长在问。</p>
+      <p class="sub ln">Parents are asking.</p>
+      <p class="body"><span class="L-en">They ask in Chinese, in public, and other parents read the answers. Each of these is a post waiting to be written.</span><span class="L-zh" lang="zh-Hans">他们用中文公开地问，别的家长都看得到回答。这里每个问题，都是一条还没人写的帖子。</span></p>
+    </div>
+    <ol class="wall">
+      <li><p class="wq" lang="zh-Hans"><span class="hl">周末留校的孩子，在学校做什么？</span></p><p class="gl">What do boarders actually do at weekends?</p></li>
+      <li><p class="wq" lang="zh-Hans"><span class="hl">第一次离家，孩子想家了怎么办？</span></p><p class="gl">What happens when a child is homesick?</p></li>
+      <li><p class="wq" lang="zh-Hans"><span class="hl">孩子生病了，谁带去看医生？</span></p><p class="gl">If my child is ill, who takes them to the doctor?</p></li>
+      <li><p class="wq" lang="zh-Hans"><span class="hl">手机能带吗？什么时候能用？</span></p><p class="gl">Can students keep their phones? When can they use them?</p></li>
+      <li><p class="wq" lang="zh-Hans"><span class="hl">英语跟不上，学校怎么帮？</span></p><p class="gl">What if my child’s English isn’t ready?</p></li>
+      <li><p class="wq" lang="zh-Hans"><span class="hl">有时差，怎么联系老师？</span></p><p class="gl">How do I reach a teacher across the time difference?</p></li>
+    </ol>
+    <div class="corner bot"><span><span class="L-en">Examples of what parents ask · not from one school</span><span class="L-zh" lang="zh-Hans">示例问题 · 不针对某一所学校</span></span><span>by Junemoon</span></div>
+  </div>
 </section>
 
-<!-- 8 · 收尾 -->
-<section class="screen s8" id="s8">
-  <span class="gloss tag no">08 / 08</span>
-  <p class="zh ln fit" lang="zh-Hans"><span class="ph">家长已经</span><span class="ph">在问了。</span></p>
-  <p class="gloss sub en ln">They’re already asking.</p>
-  <p class="cta"><a class="btn inv" data-mail href="mailto:riversense11@gmail.com?subject=One-page%20audit%20for%20%7Bschool%7D">Ask for your one-page audit</a></p>
-  <p class="gloss foot"><span data-brand>Subtitled</span> is a service by Junemoon, Shenzhen. Boyatt Limited, Hong Kong. <a href="mailto:riversense11@gmail.com">riversense11@gmail.com</a></p>
+<!-- 查 · AUDIT — white field, the poster with the 0 -->
+<section class="f f-chalk audit" id="audit">
+  <div class="w">
+    <div class="corner"><span><span data-brand>Subtitled</span></span><span>03 · <span lang="zh-Hans">查</span> · AUDIT</span></div>
+    <div class="audit-g">
+      <div class="audit-t">
+        <p class="zh ln nw" lang="zh-Hans">你不在场。</p>
+        <p class="sub ln">You are not in the room.</p>
+        <p class="body"><span class="L-en">Search your school’s name on Xiaohongshu and you’ll likely find posts by agents, former students and parents. If you’ve never opened an account, none of them are yours. The one-page audit shows you which.</span><span class="L-zh" lang="zh-Hans">在小红书上搜你学校的名字，多半能看到中介、以前的学生和家长发的帖子。你没开过账号，这些帖子没有一条是你的。一页体检会把它们列给你看。</span></p>
+        <p class="more"><a class="lnk" data-mail href="mailto:riversense11@gmail.com?subject=One-page%20audit%20for%20%7Bschool%7D"><span class="L-en">Ask for yours →</span><span class="L-zh" lang="zh-Hans">要一份你学校的 →</span></a></p>
+      </div>
+      <figure class="poster" aria-label="Format demo: others have written N posts about you; you have written 0">
+        <p class="pz" lang="zh-Hans">别人写了你 <b>N</b> 条</p>
+        <p class="gl">Others have written N posts about you</p>
+        <p class="pz mt" lang="zh-Hans">你自己写了</p>
+        <p class="gl">You have written</p>
+        <p class="zero" aria-hidden="true">0</p>
+      </figure>
+    </div>
+    <div class="corner bot"><span>Format demo · example school</span><span>by Junemoon</span></div>
+  </div>
+</section>
+
+<!-- 答 · ANSWER — colour field -->
+<section class="f f-hl answer" id="answer">
+  <div class="w">
+    <div class="corner"><span><span data-brand>Subtitled</span></span><span>04 · <span lang="zh-Hans">答</span> · ANSWER</span></div>
+    <div class="ans-g">
+      <p class="big-zi" lang="zh-Hans" aria-hidden="true">答</p>
+      <div class="ans-t">
+        <p class="eq"><span lang="zh-Hans">答</span> = TO ANSWER</p>
+        <h2 class="disp"><span class="L-en">Someone else is answering. It could be you.</span><span class="L-zh" lang="zh-Hans">现在替你回答的是别人。<br>可以换成你。</span></h2>
+        <ul class="ticks">
+          <li><span class="L-en">An account in the school’s own name.</span><span class="L-zh" lang="zh-Hans">账号开在学校自己名下。</span></li>
+          <li><span class="L-en">Twelve posts a month, written in Chinese.</span><span class="L-zh" lang="zh-Hans">每月十二条，用中文写。</span></li>
+          <li><span class="L-en">Every word in English, before it goes out.</span><span class="L-zh" lang="zh-Hans">发出去之前，每个字都有英文给你看。</span></li>
+          <li><span class="L-en">Replies to parents on working days.</span><span class="L-zh" lang="zh-Hans">工作日回复家长。</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 · the month — white field -->
+<section class="f f-chalk month-s" id="s5">
+  <div class="w">
+    <div class="corner"><span><span data-brand>Subtitled</span></span><span>05 / 09</span></div>
+    <p class="zh ln" lang="zh-Hans"><span class="ph">一个月，</span><span class="ph">十二条。</span></p>
+    <p class="sub ln">One month. Twelve posts.</p>
+    <div class="month">
+      <div class="calwrap">
+        <div class="wk" aria-hidden="true"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span></div>
+        <ol class="cal" id="cal" aria-label="A sample month: twelve posts">
+          <li></li><li></li><li><i>1</i></li>
+          <li class="on"><button type="button" data-zh="周末留校的孩子，在学校做什么？" data-en="What do boarders actually do at weekends?"><b lang="zh-Hans">问答</b><span class="gl">Q&amp;A</span></button><i>2</i></li>
+          <li><i>3</i></li>
+          <li class="on"><button type="button" data-zh="一个普通的周三，从 6:50 到 21:30" data-en="An ordinary Wednesday, from 6:50 to 21:30"><b lang="zh-Hans">一天</b><span class="gl">A day</span></button><i>4</i></li>
+          <li><i>5</i></li>
+          <li><i>6</i></li>
+          <li class="on"><button type="button" data-zh="申请截止日和面试时间，一张表看完" data-en="Application deadlines and interview dates, on one page"><b lang="zh-Hans">日期和费用</b><span class="gl">Dates &amp; fees</span></button><i>7</i></li>
+          <li><i>8</i></li>
+          <li class="on"><button type="button" data-zh="第一次离家，孩子想家了怎么办？" data-en="What happens when a child is homesick?"><b lang="zh-Hans">问答</b><span class="gl">Q&amp;A</span></button><i>9</i></li>
+          <li><i>10</i></li>
+          <li class="on"><button type="button" data-zh="孩子生病了，谁带去看医生？" data-en="If my child is ill, who takes them to the doctor?"><b lang="zh-Hans">问答</b><span class="gl">Q&amp;A</span></button><i>11</i></li>
+          <li><i>12</i></li>
+          <li><i>13</i></li>
+          <li class="on"><button type="button" data-zh="寄宿生的周六" data-en="A boarder’s Saturday"><b lang="zh-Hans">一天</b><span class="gl">A day</span></button><i>14</i></li>
+          <li><i>15</i></li>
+          <li class="on"><button type="button" data-zh="手机能带吗？什么时候能用？" data-en="Can students keep their phones? When can they use them?"><b lang="zh-Hans">问答</b><span class="gl">Q&amp;A</span></button><i>16</i></li>
+          <li><i>17</i></li>
+          <li class="on"><button type="button" data-zh="学费之外，还要付哪些钱" data-en="Every cost beyond tuition"><b lang="zh-Hans">日期和费用</b><span class="gl">Dates &amp; fees</span></button><i>18</i></li>
+          <li><i>19</i></li>
+          <li><i>20</i></li>
+          <li class="on"><button type="button" data-zh="英语跟不上，学校怎么帮？" data-en="What if my child’s English isn’t ready?"><b lang="zh-Hans">问答</b><span class="gl">Q&amp;A</span></button><i>21</i></li>
+          <li><i>22</i></li>
+          <li class="on"><button type="button" data-zh="考试周的一天" data-en="A day in exam week"><b lang="zh-Hans">一天</b><span class="gl">A day</span></button><i>23</i></li>
+          <li><i>24</i></li>
+          <li class="on"><button type="button" data-zh="有时差，怎么联系老师？" data-en="How do I reach a teacher across the time difference?"><b lang="zh-Hans">问答</b><span class="gl">Q&amp;A</span></button><i>25</i></li>
+          <li><i>26</i></li>
+          <li><i>27</i></li>
+          <li class="on"><button type="button" data-zh="押金、退款和分期付款" data-en="Deposits, refunds and paying in instalments"><b lang="zh-Hans">日期和费用</b><span class="gl">Dates &amp; fees</span></button><i>28</i></li>
+          <li><i>29</i></li>
+          <li><i>30</i></li>
+          <li><i>31</i></li>
+          <li></li><li></li>
+        </ol>
+      </div>
+      <aside class="side">
+        <div class="readout" id="readout" aria-live="polite">
+          <p class="ro-k"><span class="hint-hover"><span class="L-en">Hover a dark square</span><span class="L-zh" lang="zh-Hans">把鼠标放到黑格上</span></span><span class="hint-tap"><span class="L-en">Tap a dark square</span><span class="L-zh" lang="zh-Hans">点一下黑格</span></span></p>
+          <p class="ro-zh" lang="zh-Hans" id="ro-zh">周末留校的孩子，在学校做什么？</p>
+          <p class="gl" id="ro-en">What do boarders actually do at weekends?</p>
+        </div>
+        <dl class="legend">
+          <div><dt lang="zh-Hans">问答</dt><dd><span class="L-en">One question parents are asking, answered.</span><span class="L-zh" lang="zh-Hans">回答一个家长正在问的问题。</span></dd></div>
+          <div><dt lang="zh-Hans">一天</dt><dd><span class="L-en">An ordinary day, hour by hour.</span><span class="L-zh" lang="zh-Hans">普通的一天，按钟点写。</span></dd></div>
+          <div><dt lang="zh-Hans">日期和费用</dt><dd><span class="L-en">Deadlines, and every payment.</span><span class="L-zh" lang="zh-Hans">截止日期，和每一笔钱。</span></dd></div>
+        </dl>
+      </aside>
+    </div>
+    <div class="corner bot"><span>Sample month · not published anywhere</span><span>by Junemoon</span></div>
+  </div>
+</section>
+
+<!-- 06 · every word — black field, the draft on paper -->
+<section class="f f-ink words" id="s6">
+  <div class="w">
+    <div class="corner"><span><span data-brand>Subtitled</span></span><span>06 / 09</span></div>
+    <div class="words-g">
+      <div class="words-t">
+        <p class="zh ln" lang="zh-Hans"><span class="ph">每一个字，</span><span class="ph">你都看得懂。</span></p>
+        <p class="sub ln">Every word, in English, before it goes out.</p>
+        <p class="body"><span class="L-en">Each post reaches you two days before it’s published, Chinese on the left, English on the right. Change anything. Say nothing for 48 hours and it goes out as written.</span><span class="L-zh" lang="zh-Hans">每条帖子发出前两天先给你，左边中文，右边英文。哪里都可以改。48 小时没意见，就按原样发。</span></p>
+      </div>
+      <figure class="draft" aria-label="A sample post, Chinese on the left, English on the right">
+        <div class="dr-row dr-h"><span>中文</span><span>ENGLISH</span></div>
+        <div class="dr-row dr-title"><p lang="zh-Hans">寄宿学校的一个周三</p><p>A Wednesday at boarding school</p></div>
+        <div class="dr-row"><p lang="zh-Hans">很多家长问：<span class="hl">“孩子住校，晚上谁在？”</span>我们按钟点写一个普通的周三。</p><p>Many parents ask: “Who is there at night?” Here is an ordinary Wednesday, by the clock.</p></div>
+        <div class="dr-row"><p lang="zh-Hans"><b>6:50</b> 起床。宿舍老师敲门，十五分钟后去食堂吃早饭。</p><p><b>6:50</b> Wake up. The house tutor knocks; breakfast is fifteen minutes later.</p></div>
+        <div class="dr-row"><p lang="zh-Hans"><b>8:30</b> 第一节课。上午四节，中间有一次课间休息。</p><p><b>8:30</b> First lesson. Four in the morning, with a break in the middle.</p></div>
+        <div class="dr-row"><p lang="zh-Hans"><b>14:00</b> 周三下午是运动时间，项目由孩子自己选。</p><p><b>14:00</b> Wednesday afternoon is sport. Students choose their own.</p></div>
+        <div class="dr-row"><p lang="zh-Hans"><b>19:00</b> 晚自习两小时，有老师在教室，可以问作业。</p><p><b>19:00</b> Two hours of prep, with a teacher in the room to help.</p></div>
+        <div class="dr-row"><p lang="zh-Hans"><b>21:30</b> 熄灯。宿舍老师就住在楼里，夜里有事随时找得到。</p><p><b>21:30</b> Lights out. The house tutor lives in the building and can be found at any hour.</p></div>
+        <figcaption class="dr-foot">SAMPLE ONLY · NOT PUBLISHED ANYWHERE</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 07 · the account, and what we don't promise — white field -->
+<section class="f f-chalk terms" id="s7">
+  <div class="w">
+    <div class="corner"><span><span data-brand>Subtitled</span></span><span>07 / 09</span></div>
+    <div class="terms-g">
+      <div>
+        <p class="zh ln" lang="zh-Hans">账号是你的。</p>
+        <p class="sub ln">The account is yours.</p>
+        <dl class="rows">
+          <div><dt><span class="L-en">Opened in your name</span><span class="L-zh" lang="zh-Hans">开在你名下</span></dt><dd><span class="L-en">The account is registered to the school from the first day.</span><span class="L-zh" lang="zh-Hans">从第一天起，账号就登记在学校名下。</span></dd></div>
+          <div><dt><span class="L-en">Leave when you like</span><span class="L-zh" lang="zh-Hans">随时可以走</span></dt><dd><span class="L-en">You keep the account, every post, every image and the list of questions parents asked.</span><span class="L-zh" lang="zh-Hans">账号、每条帖子、每张图，还有家长问过的问题清单，都归你。</span></dd></div>
+          <div><dt><span class="L-en">Nothing else touched</span><span class="L-zh" lang="zh-Hans">别的不碰</span></dt><dd><span class="L-en">We never ask for access to your website, your admissions system or your inbox.</span><span class="L-zh" lang="zh-Hans">不要你网站、招生系统和邮箱的权限。</span></dd></div>
+        </dl>
+        <p class="body"><span class="L-en">Questions about offers, fees or visas are translated and passed to you. We don’t answer for the school.</span><span class="L-zh" lang="zh-Hans">问录取、学费、签证的，我们翻译好转给你，不替学校回答。</span></p>
+      </div>
+      <div>
+        <p class="zh ln" lang="zh-Hans">不保证的事。</p>
+        <p class="sub ln">What we don’t promise.</p>
+        <div class="two">
+          <div>
+            <p class="k"><span class="L-en">We don’t promise</span><span class="L-zh" lang="zh-Hans">不保证</span></p>
+            <ul class="no-list"><li><span class="L-en">Followers.</span><span class="L-zh" lang="zh-Hans">粉丝数。</span></li><li><span class="L-en">Enquiries.</span><span class="L-zh" lang="zh-Hans">咨询量。</span></li><li><span class="L-en">Admissions.</span><span class="L-zh" lang="zh-Hans">录取人数。</span></li></ul>
+          </div>
+          <div>
+            <p class="k"><span class="L-en">We do</span><span class="L-zh" lang="zh-Hans">保证</span></p>
+            <ul class="plain">
+              <li><span class="L-en">Twelve posts a month, on the days agreed.</span><span class="L-zh" lang="zh-Hans">每月十二条，按约定的日子发。</span></li>
+              <li><span class="L-en">A reply to every parent on the same working day.</span><span class="L-zh" lang="zh-Hans">每位家长的留言，工作日当天回复。</span></li>
+              <li><span class="L-en">A one-page report on the first of each month.</span><span class="L-zh" lang="zh-Hans">每月 1 号，一页报告。</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 · price — black field, the number fills the width -->
+<section class="f f-ink price" id="price">
+  <div class="w">
+    <div class="corner"><span><span data-brand>Subtitled</span></span><span>08 / 09</span></div>
+    <p class="zh ln" lang="zh-Hans"><span class="ph">一个月，</span><span class="ph">一个价。</span></p>
+    <p class="sub ln">One price, by the month.</p>
+    <p class="fig" data-fit="1"><span class="cur">US$</span>1,500</p>
+    <div class="price-r">
+      <p class="per"><span class="L-en">a month</span><span class="L-zh" lang="zh-Hans">每月</span></p>
+      <ul class="spec">
+        <li><span class="L-en">Twelve posts, replies, the monthly report</span><span class="L-zh" lang="zh-Hans">十二条帖子、回复、月报</span></li>
+        <li><span class="L-en">First term three months</span><span class="L-zh" lang="zh-Hans">首期三个月</span></li>
+        <li><span class="L-en">Invoiced by Boyatt Limited, Hong Kong</span><span class="L-zh" lang="zh-Hans">由香港 Boyatt Limited 开票</span></li>
+        <li class="dim"><span class="L-en">Not included: advertising, influencer deals, WeChat, filming</span><span class="L-zh" lang="zh-Hans">不含：投放广告、达人合作、微信、拍摄</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 09 · close — colour field -->
+<section class="f f-hl close" id="s9">
+  <div class="w">
+    <div class="corner"><span><span data-brand>Subtitled</span></span><span>09 / 09</span></div>
+    <p class="zh fit ln" lang="zh-Hans" data-fit="1">家长已经在问了。</p>
+    <p class="sub ln">They’re already asking.</p>
+    <p class="cta"><a class="btn" data-mail href="mailto:riversense11@gmail.com?subject=One-page%20audit%20for%20%7Bschool%7D"><span class="L-en">Ask for your one-page audit</span><span class="L-zh" lang="zh-Hans">要一份免费的一页体检</span></a></p>
+    <div class="corner bot foot">
+      <span><span data-brand>Subtitled</span> <span class="L-en">is a service by Junemoon, Shenzhen.</span><span class="L-zh" lang="zh-Hans">是 Junemoon（深圳）的服务。</span> Boyatt Limited, Hong Kong.</span>
+      <a href="mailto:riversense11@gmail.com">riversense11@gmail.com</a>
+    </div>
+  </div>
 </section>
 </main>
 
