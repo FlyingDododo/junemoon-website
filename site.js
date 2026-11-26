@@ -129,7 +129,7 @@
     try { await navigator.clipboard.writeText(s); notify(t('copy.success')); }
     catch { $('#copy-text').value = s; $('#copy-dialog').showModal(); $('#copy-text').focus(); $('#copy-text').select(); }
   }
-  $('#copy-contact').addEventListener('click', () => copy(t('brand') + ' · Junemoon\nriversense11@gmail.com\n+86 187 2153 2448\n' + origin));
+  $('#copy-contact').addEventListener('click', () => copy(t('brand') + ' · Junemoon\nriversense11@gmail.com\n+86 187 2153 2448\n+852 9215 6165\n' + origin));
   $$('.share').forEach(b => b.addEventListener('click', () => { const u = new URL(page === 'work' ? 'work' : '', origin); u.searchParams.set('lang', lang); u.hash = b.dataset.share; copy(u.href); }));
   $('#close-copy').addEventListener('click', () => $('#copy-dialog').close());
   $$('[data-image]').forEach(b => b.addEventListener('click', () => {
